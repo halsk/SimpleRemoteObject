@@ -2,7 +2,7 @@
 //  NSRemoteJsonObjectTests.m
 //  NSRemoteJsonObjectTests
 //
-//  Created by Haruyuki Seki on 2/22/13.
+//  Created by Hal Seki on 2/22/13.
 //  Copyright (c) 2013 Georepublic. All rights reserved.
 //
 
