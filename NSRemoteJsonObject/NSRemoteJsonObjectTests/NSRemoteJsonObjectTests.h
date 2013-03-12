@@ -10,4 +10,5 @@
 
 @interface NSRemoteJsonObjectTests : SenTestCase
 
+
 @end

@@ -10,14 +10,21 @@
 	<string>46</string>
 	<key>objects</key>
 	<dict>
+		<key>0667D5DFA8AC47DC85FF4E8C</key>
+		<dict>
+			<key>fileRef</key>
+			<string>A5A9C3315EBB4227B43F3C27</string>
+			<key>isa</key>
+			<string>PBXBuildFile</string>
+			<key>settings</key>
+			<dict/>
+		</dict>
 		<key>2AF0AFA747244C76A1722DB7</key>
 		<dict>
 			<key>fileRef</key>
 			<string>AD1D2D1A42F5418D9BD2FD14</string>
 			<key>isa</key>
 			<string>PBXBuildFile</string>
-			<key>settings</key>
-			<dict/>
 		</dict>
 		<key>2B47DE0716D75AD400BFF0ED</key>
 		<dict>
@@ -28,6 +35,7 @@
 				<string>2B47DE1216D75AD400BFF0ED</string>
 				<string>2B47DE1116D75AD400BFF0ED</string>
 				<string>9A61116F49884F69AC64E9E4</string>
+				<string>F318331AAE0548D38BABDF08</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -192,6 +200,7 @@
 				<string>2B47DE2216D75AD400BFF0ED</string>
 				<string>2B47DE2416D75AD400BFF0ED</string>
 				<string>AD1D2D1A42F5418D9BD2FD14</string>
+				<string>A5A9C3315EBB4227B43F3C27</string>
 			</array>
 			<key>isa</key>
 			<string>PBXGroup</string>
@@ -318,6 +327,7 @@
 				<string>2B47DE2516D75AD400BFF0ED</string>
 				<string>2B47DE2616D75AD400BFF0ED</string>
 				<string>2B47DE2916D75AD400BFF0ED</string>
+				<string>0667D5DFA8AC47DC85FF4E8C</string>
 			</array>
 			<key>isa</key>
 			<string>PBXFrameworksBuildPhase</string>
@@ -368,6 +378,7 @@
 				<string>2B47DE1D16D75AD400BFF0ED</string>
 				<string>2B47DE1E16D75AD400BFF0ED</string>
 				<string>2B47DE1F16D75AD400BFF0ED</string>
+				<string>52E28ABAD8F24050A47109CD</string>
 			</array>
 			<key>buildRules</key>
 			<array/>
@@ -621,7 +632,7 @@
 				<key>GCC_WARN_UNUSED_VARIABLE</key>
 				<string>YES</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.1</string>
+				<string>5.1</string>
 				<key>ONLY_ACTIVE_ARCH</key>
 				<string>YES</string>
 				<key>SDKROOT</key>
@@ -665,7 +676,7 @@
 				<key>GCC_WARN_UNUSED_VARIABLE</key>
 				<string>YES</string>
 				<key>IPHONEOS_DEPLOYMENT_TARGET</key>
-				<string>6.1</string>
+				<string>5.1</string>
 				<key>SDKROOT</key>
 				<string>iphoneos</string>
 				<key>VALIDATE_PRODUCT</key>
@@ -685,6 +696,8 @@
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
@@ -745,11 +758,15 @@
 			</array>
 			<key>defaultConfigurationIsVisible</key>
 			<string>0</string>
+			<key>defaultConfigurationName</key>
+			<string>Release</string>
 			<key>isa</key>
 			<string>XCConfigurationList</string>
 		</dict>
 		<key>2B47DE3916D75AD400BFF0ED</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>F318331AAE0548D38BABDF08</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>FRAMEWORK_SEARCH_PATHS</key>
@@ -775,6 +792,8 @@
 		</dict>
 		<key>2B47DE3A16D75AD400BFF0ED</key>
 		<dict>
+			<key>baseConfigurationReference</key>
+			<string>F318331AAE0548D38BABDF08</string>
 			<key>buildSettings</key>
 			<dict>
 				<key>FRAMEWORK_SEARCH_PATHS</key>
@@ -797,6 +816,30 @@
 			<string>XCBuildConfiguration</string>
 			<key>name</key>
 			<string>Release</string>
+		</dict>
+		<key>52E28ABAD8F24050A47109CD</key>
+		<dict>
+			<key>buildActionMask</key>
+			<string>2147483647</string>
+			<key>files</key>
+			<array/>
+			<key>inputPaths</key>
+			<array/>
+			<key>isa</key>
+			<string>PBXShellScriptBuildPhase</string>
+			<key>name</key>
+			<string>Copy Pods Resources</string>
+			<key>outputPaths</key>
+			<array/>
+			<key>runOnlyForDeploymentPostprocessing</key>
+			<string>0</string>
+			<key>shellPath</key>
+			<string>/bin/sh</string>
+			<key>shellScript</key>
+			<string>"${SRCROOT}/Pods/Pods-NSRemoteJsonObjectTests-resources.sh"
+</string>
+			<key>showEnvVarsInLog</key>
+			<string>1</string>
 		</dict>
 		<key>9A61116F49884F69AC64E9E4</key>
 		<dict>
@@ -834,8 +877,21 @@
 			<key>shellScript</key>
 			<string>"${SRCROOT}/Pods/Pods-resources.sh"
 </string>
-			<key>showEnvVarsInLog</key>
-			<string>1</string>
+		</dict>
+		<key>A5A9C3315EBB4227B43F3C27</key>
+		<dict>
+			<key>explicitFileType</key>
+			<string>archive.ar</string>
+			<key>includeInIndex</key>
+			<string>0</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>name</key>
+			<string>libPods-NSRemoteJsonObjectTests.a</string>
+			<key>path</key>
+			<string>libPods-NSRemoteJsonObjectTests.a</string>
+			<key>sourceTree</key>
+			<string>BUILT_PRODUCTS_DIR</string>
 		</dict>
 		<key>AD1D2D1A42F5418D9BD2FD14</key>
 		<dict>
@@ -845,12 +901,25 @@
 			<string>0</string>
 			<key>isa</key>
 			<string>PBXFileReference</string>
-			<key>name</key>
-			<string>libPods.a</string>
 			<key>path</key>
 			<string>libPods.a</string>
 			<key>sourceTree</key>
 			<string>BUILT_PRODUCTS_DIR</string>
+		</dict>
+		<key>F318331AAE0548D38BABDF08</key>
+		<dict>
+			<key>includeInIndex</key>
+			<string>1</string>
+			<key>isa</key>
+			<string>PBXFileReference</string>
+			<key>lastKnownFileType</key>
+			<string>text.xcconfig</string>
+			<key>name</key>
+			<string>Pods-NSRemoteJsonObjectTests.xcconfig</string>
+			<key>path</key>
+			<string>Pods/Pods-NSRemoteJsonObjectTests.xcconfig</string>
+			<key>sourceTree</key>
+			<string>SOURCE_ROOT</string>
 		</dict>
 	</dict>
 	<key>rootObject</key>
