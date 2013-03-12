@@ -6,8 +6,11 @@
 //  Copyright (c) 2013 Georepublic. All rights reserved.
 //
 
-#import "NSRemoteJsonObject.h"
+#import "NRJRemoteJsonObject.h"
 
-@interface Tag : NSRemoteJsonObject
+@interface Tag : NRJRemoteJsonObject
+@property(nonatomic,retain) NSString *name;
+@property(nonatomic,retain) NSString *resource_uri;
+@property(nonatomic,retain) NSString *slug;
 
 @end

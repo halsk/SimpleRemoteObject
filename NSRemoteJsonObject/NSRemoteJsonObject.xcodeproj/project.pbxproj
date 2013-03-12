@@ -16,15 +16,16 @@
 		2B29FBB216EF72F000FE1940 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBB116EF72F000FE1940 /* User.m */; };
 		2B29FBB816EF73C700FE1940 /* NSObject+NRJPropertyUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBB716EF73C700FE1940 /* NSObject+NRJPropertyUtil.m */; };
 		2B29FBBB16EF7A9D00FE1940 /* NRJRemoteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBBA16EF7A9D00FE1940 /* NRJRemoteConfig.m */; };
+		2B29FBBE16EF7DBA00FE1940 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBBD16EF7DBA00FE1940 /* Tag.m */; };
 		2B47DE1416D75AD400BFF0ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B47DE1316D75AD400BFF0ED /* Foundation.framework */; };
-		2B47DE1916D75AD400BFF0ED /* NSRemoteJsonObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B47DE1816D75AD400BFF0ED /* NSRemoteJsonObject.h */; };
-		2B47DE1B16D75AD400BFF0ED /* NSRemoteJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B47DE1A16D75AD400BFF0ED /* NSRemoteJsonObject.m */; };
+		2B47DE1916D75AD400BFF0ED /* NRJRemoteJsonObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B47DE1816D75AD400BFF0ED /* NRJRemoteJsonObject.h */; };
+		2B47DE1B16D75AD400BFF0ED /* NRJRemoteJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B47DE1A16D75AD400BFF0ED /* NRJRemoteJsonObject.m */; };
 		2B47DE2316D75AD400BFF0ED /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B47DE2216D75AD400BFF0ED /* SenTestingKit.framework */; };
 		2B47DE2516D75AD400BFF0ED /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B47DE2416D75AD400BFF0ED /* UIKit.framework */; };
 		2B47DE2616D75AD400BFF0ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B47DE1316D75AD400BFF0ED /* Foundation.framework */; };
 		2B47DE2916D75AD400BFF0ED /* libNSRemoteJsonObject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B47DE1016D75AD400BFF0ED /* libNSRemoteJsonObject.a */; };
 		2B47DE2F16D75AD400BFF0ED /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B47DE2D16D75AD400BFF0ED /* InfoPlist.strings */; };
-		2B47DE3216D75AD400BFF0ED /* NSRemoteJsonObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B47DE3116D75AD400BFF0ED /* NSRemoteJsonObjectTests.m */; };
+		2B47DE3216D75AD400BFF0ED /* NRJRemoteJsonObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B47DE3116D75AD400BFF0ED /* NRJRemoteJsonObjectTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,7 +45,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				2B47DE1916D75AD400BFF0ED /* NSRemoteJsonObject.h in CopyFiles */,
+				2B47DE1916D75AD400BFF0ED /* NRJRemoteJsonObject.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,17 +61,19 @@
 		2B29FBB716EF73C700FE1940 /* NSObject+NRJPropertyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NRJPropertyUtil.m"; sourceTree = "<group>"; };
 		2B29FBB916EF7A9D00FE1940 /* NRJRemoteConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRJRemoteConfig.h; sourceTree = "<group>"; };
 		2B29FBBA16EF7A9D00FE1940 /* NRJRemoteConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRJRemoteConfig.m; sourceTree = "<group>"; };
+		2B29FBBC16EF7DBA00FE1940 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tag.h; path = classes/Tag.h; sourceTree = "<group>"; };
+		2B29FBBD16EF7DBA00FE1940 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tag.m; path = classes/Tag.m; sourceTree = "<group>"; };
 		2B47DE1016D75AD400BFF0ED /* libNSRemoteJsonObject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNSRemoteJsonObject.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B47DE1316D75AD400BFF0ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B47DE1716D75AD400BFF0ED /* NSRemoteJsonObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRemoteJsonObject-Prefix.pch"; sourceTree = "<group>"; };
-		2B47DE1816D75AD400BFF0ED /* NSRemoteJsonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRemoteJsonObject.h; sourceTree = "<group>"; };
-		2B47DE1A16D75AD400BFF0ED /* NSRemoteJsonObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRemoteJsonObject.m; sourceTree = "<group>"; };
+		2B47DE1816D75AD400BFF0ED /* NRJRemoteJsonObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NRJRemoteJsonObject.h; sourceTree = "<group>"; };
+		2B47DE1A16D75AD400BFF0ED /* NRJRemoteJsonObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRJRemoteJsonObject.m; sourceTree = "<group>"; };
 		2B47DE2116D75AD400BFF0ED /* NSRemoteJsonObjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NSRemoteJsonObjectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B47DE2216D75AD400BFF0ED /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2B47DE2416D75AD400BFF0ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		2B47DE2C16D75AD400BFF0ED /* NSRemoteJsonObjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSRemoteJsonObjectTests-Info.plist"; sourceTree = "<group>"; };
 		2B47DE2E16D75AD400BFF0ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2B47DE3116D75AD400BFF0ED /* NSRemoteJsonObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRemoteJsonObjectTests.m; sourceTree = "<group>"; };
+		2B47DE3116D75AD400BFF0ED /* NRJRemoteJsonObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NRJRemoteJsonObjectTests.m; sourceTree = "<group>"; };
 		3896BDA862BE48958DA58BB8 /* Pods-NSRemoteJsonObjectTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSRemoteJsonObjectTests.xcconfig"; path = "Pods/Pods-NSRemoteJsonObjectTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 		54989670A97B41EF9A4A646B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		F186AC0BB2A3425AB5F08F08 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +113,8 @@
 			children = (
 				2B29FBB016EF72F000FE1940 /* User.h */,
 				2B29FBB116EF72F000FE1940 /* User.m */,
+				2B29FBBC16EF7DBA00FE1940 /* Tag.h */,
+				2B29FBBD16EF7DBA00FE1940 /* Tag.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -152,13 +157,13 @@
 		2B47DE1516D75AD400BFF0ED /* NSRemoteJsonObject */ = {
 			isa = PBXGroup;
 			children = (
-				2B47DE1816D75AD400BFF0ED /* NSRemoteJsonObject.h */,
-				2B47DE1A16D75AD400BFF0ED /* NSRemoteJsonObject.m */,
+				2B29FBB916EF7A9D00FE1940 /* NRJRemoteConfig.h */,
+				2B29FBBA16EF7A9D00FE1940 /* NRJRemoteConfig.m */,
+				2B47DE1816D75AD400BFF0ED /* NRJRemoteJsonObject.h */,
+				2B47DE1A16D75AD400BFF0ED /* NRJRemoteJsonObject.m */,
 				2B47DE1616D75AD400BFF0ED /* Supporting Files */,
 				2B29FBB616EF73C700FE1940 /* NSObject+NRJPropertyUtil.h */,
 				2B29FBB716EF73C700FE1940 /* NSObject+NRJPropertyUtil.m */,
-				2B29FBB916EF7A9D00FE1940 /* NRJRemoteConfig.h */,
-				2B29FBBA16EF7A9D00FE1940 /* NRJRemoteConfig.m */,
 			);
 			path = NSRemoteJsonObject;
 			sourceTree = "<group>";
@@ -175,7 +180,7 @@
 			isa = PBXGroup;
 			children = (
 				2B29FBAC16EF71CB00FE1940 /* classes */,
-				2B47DE3116D75AD400BFF0ED /* NSRemoteJsonObjectTests.m */,
+				2B47DE3116D75AD400BFF0ED /* NRJRemoteJsonObjectTests.m */,
 				2B47DE2B16D75AD400BFF0ED /* Supporting Files */,
 			);
 			path = NSRemoteJsonObjectTests;
@@ -318,7 +323,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B47DE1B16D75AD400BFF0ED /* NSRemoteJsonObject.m in Sources */,
+				2B47DE1B16D75AD400BFF0ED /* NRJRemoteJsonObject.m in Sources */,
 				2B29FBB816EF73C700FE1940 /* NSObject+NRJPropertyUtil.m in Sources */,
 				2B29FBBB16EF7A9D00FE1940 /* NRJRemoteConfig.m in Sources */,
 			);
@@ -328,8 +333,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B47DE3216D75AD400BFF0ED /* NSRemoteJsonObjectTests.m in Sources */,
+				2B47DE3216D75AD400BFF0ED /* NRJRemoteJsonObjectTests.m in Sources */,
 				2B29FBB216EF72F000FE1940 /* User.m in Sources */,
+				2B29FBBE16EF7DBA00FE1940 /* Tag.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,4 +10,10 @@
 
 @implementation Tag
 
++(NSString *)representUrl{
+    return @"tags.json";
+}
++(NSString *)resultKey{
+    return @"objects";
+}
 @end

@@ -7,7 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef void(^NRJFetchCompletionBlock)(NSArray *allRemote, NSError *error);
 
-@interface NSRemoteJsonObject : NSObject
+
+@interface NRJRemoteJsonObject : NSObject
+@property (nonatomic, strong) NSNumber* remoteId;
+
++(void)fetchAsync:(NRJFetchCompletionBlock)completionBlock;
+
+/*
+ // should override on subclass
+ */
++(NSString *)representUrl;
++(NSString *)resultKey;
+-(void)parseObject:(id)object ForKey:(NSString *)key;
+
+
 
 @end
