@@ -54,7 +54,6 @@
 		2B47DE2416D75AD400BFF0ED /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		2B47DE2C16D75AD400BFF0ED /* NSRemoteJsonObjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "NSRemoteJsonObjectTests-Info.plist"; sourceTree = "<group>"; };
 		2B47DE2E16D75AD400BFF0ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		2B47DE3016D75AD400BFF0ED /* NSRemoteJsonObjectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRemoteJsonObjectTests.h; sourceTree = "<group>"; };
 		2B47DE3116D75AD400BFF0ED /* NSRemoteJsonObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRemoteJsonObjectTests.m; sourceTree = "<group>"; };
 		3896BDA862BE48958DA58BB8 /* Pods-NSRemoteJsonObjectTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSRemoteJsonObjectTests.xcconfig"; path = "Pods/Pods-NSRemoteJsonObjectTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -135,7 +134,6 @@
 		2B47DE2A16D75AD400BFF0ED /* NSRemoteJsonObjectTests */ = {
 			isa = PBXGroup;
 			children = (
-				2B47DE3016D75AD400BFF0ED /* NSRemoteJsonObjectTests.h */,
 				2B47DE3116D75AD400BFF0ED /* NSRemoteJsonObjectTests.m */,
 				2B47DE2B16D75AD400BFF0ED /* Supporting Files */,
 			);
