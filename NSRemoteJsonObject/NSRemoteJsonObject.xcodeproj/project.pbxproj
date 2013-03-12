@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		127DAA3FF5604748AE752BC7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F186AC0BB2A3425AB5F08F08 /* libPods.a */; };
 		1645C0BF7BD44D6EAD168224 /* libPods-NSRemoteJsonObjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2357B0057FD14278A43F2561 /* libPods-NSRemoteJsonObjectTests.a */; };
+		2B29FBA516EF38CC00FE1940 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBA416EF38CC00FE1940 /* MobileCoreServices.framework */; };
+		2B29FBA716EF38D400FE1940 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBA616EF38D400FE1940 /* SystemConfiguration.framework */; };
+		2B29FBAA16EF39DA00FE1940 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBA416EF38CC00FE1940 /* MobileCoreServices.framework */; };
+		2B29FBAB16EF39E900FE1940 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBA616EF38D400FE1940 /* SystemConfiguration.framework */; };
+		2B29FBB216EF72F000FE1940 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBB116EF72F000FE1940 /* User.m */; };
+		2B29FBB816EF73C700FE1940 /* NSObject+NRJPropertyUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBB716EF73C700FE1940 /* NSObject+NRJPropertyUtil.m */; };
 		2B47DE1416D75AD400BFF0ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B47DE1316D75AD400BFF0ED /* Foundation.framework */; };
 		2B47DE1916D75AD400BFF0ED /* NSRemoteJsonObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B47DE1816D75AD400BFF0ED /* NSRemoteJsonObject.h */; };
 		2B47DE1B16D75AD400BFF0ED /* NSRemoteJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B47DE1A16D75AD400BFF0ED /* NSRemoteJsonObject.m */; };
@@ -44,6 +51,12 @@
 
 /* Begin PBXFileReference section */
 		2357B0057FD14278A43F2561 /* libPods-NSRemoteJsonObjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSRemoteJsonObjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2B29FBA416EF38CC00FE1940 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2B29FBA616EF38D400FE1940 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		2B29FBB016EF72F000FE1940 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = classes/User.h; sourceTree = "<group>"; };
+		2B29FBB116EF72F000FE1940 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = classes/User.m; sourceTree = "<group>"; };
+		2B29FBB616EF73C700FE1940 /* NSObject+NRJPropertyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NRJPropertyUtil.h"; sourceTree = "<group>"; };
+		2B29FBB716EF73C700FE1940 /* NSObject+NRJPropertyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NRJPropertyUtil.m"; sourceTree = "<group>"; };
 		2B47DE1016D75AD400BFF0ED /* libNSRemoteJsonObject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNSRemoteJsonObject.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B47DE1316D75AD400BFF0ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B47DE1716D75AD400BFF0ED /* NSRemoteJsonObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRemoteJsonObject-Prefix.pch"; sourceTree = "<group>"; };
@@ -56,6 +69,8 @@
 		2B47DE2E16D75AD400BFF0ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B47DE3116D75AD400BFF0ED /* NSRemoteJsonObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRemoteJsonObjectTests.m; sourceTree = "<group>"; };
 		3896BDA862BE48958DA58BB8 /* Pods-NSRemoteJsonObjectTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSRemoteJsonObjectTests.xcconfig"; path = "Pods/Pods-NSRemoteJsonObjectTests.xcconfig"; sourceTree = SOURCE_ROOT; };
+		54989670A97B41EF9A4A646B /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		F186AC0BB2A3425AB5F08F08 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,7 +78,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B29FBA716EF38D400FE1940 /* SystemConfiguration.framework in Frameworks */,
+				2B29FBA516EF38CC00FE1940 /* MobileCoreServices.framework in Frameworks */,
 				2B47DE1416D75AD400BFF0ED /* Foundation.framework in Frameworks */,
+				127DAA3FF5604748AE752BC7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +89,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B29FBAB16EF39E900FE1940 /* SystemConfiguration.framework in Frameworks */,
+				2B29FBAA16EF39DA00FE1940 /* MobileCoreServices.framework in Frameworks */,
 				2B47DE2316D75AD400BFF0ED /* SenTestingKit.framework in Frameworks */,
 				2B47DE2516D75AD400BFF0ED /* UIKit.framework in Frameworks */,
 				2B47DE2616D75AD400BFF0ED /* Foundation.framework in Frameworks */,
@@ -82,14 +102,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B29FBAC16EF71CB00FE1940 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				2B29FBB016EF72F000FE1940 /* User.h */,
+				2B29FBB116EF72F000FE1940 /* User.m */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
 		2B47DE0716D75AD400BFF0ED = {
 			isa = PBXGroup;
 			children = (
+				2B29FBA616EF38D400FE1940 /* SystemConfiguration.framework */,
+				2B29FBA416EF38CC00FE1940 /* MobileCoreServices.framework */,
 				2B47DE1516D75AD400BFF0ED /* NSRemoteJsonObject */,
 				2B47DE2A16D75AD400BFF0ED /* NSRemoteJsonObjectTests */,
 				2B47DE1216D75AD400BFF0ED /* Frameworks */,
 				2B47DE1116D75AD400BFF0ED /* Products */,
 				3896BDA862BE48958DA58BB8 /* Pods-NSRemoteJsonObjectTests.xcconfig */,
+				54989670A97B41EF9A4A646B /* Pods.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +141,7 @@
 				2B47DE2216D75AD400BFF0ED /* SenTestingKit.framework */,
 				2B47DE2416D75AD400BFF0ED /* UIKit.framework */,
 				2357B0057FD14278A43F2561 /* libPods-NSRemoteJsonObjectTests.a */,
+				F186AC0BB2A3425AB5F08F08 /* libPods.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -119,6 +152,8 @@
 				2B47DE1816D75AD400BFF0ED /* NSRemoteJsonObject.h */,
 				2B47DE1A16D75AD400BFF0ED /* NSRemoteJsonObject.m */,
 				2B47DE1616D75AD400BFF0ED /* Supporting Files */,
+				2B29FBB616EF73C700FE1940 /* NSObject+NRJPropertyUtil.h */,
+				2B29FBB716EF73C700FE1940 /* NSObject+NRJPropertyUtil.m */,
 			);
 			path = NSRemoteJsonObject;
 			sourceTree = "<group>";
@@ -134,6 +169,7 @@
 		2B47DE2A16D75AD400BFF0ED /* NSRemoteJsonObjectTests */ = {
 			isa = PBXGroup;
 			children = (
+				2B29FBAC16EF71CB00FE1940 /* classes */,
 				2B47DE3116D75AD400BFF0ED /* NSRemoteJsonObjectTests.m */,
 				2B47DE2B16D75AD400BFF0ED /* Supporting Files */,
 			);
@@ -159,6 +195,7 @@
 				2B47DE0C16D75AD400BFF0ED /* Sources */,
 				2B47DE0D16D75AD400BFF0ED /* Frameworks */,
 				2B47DE0E16D75AD400BFF0ED /* CopyFiles */,
+				560D67E09C5C4B7BA3AF9F54 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -241,6 +278,20 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
+		560D67E09C5C4B7BA3AF9F54 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		EBD6AEAA9B2F48788F9D0249 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -263,6 +314,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B47DE1B16D75AD400BFF0ED /* NSRemoteJsonObject.m in Sources */,
+				2B29FBB816EF73C700FE1940 /* NSObject+NRJPropertyUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B47DE3216D75AD400BFF0ED /* NSRemoteJsonObjectTests.m in Sources */,
+				2B29FBB216EF72F000FE1940 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,6 +404,7 @@
 		};
 		2B47DE3616D75AD400BFF0ED /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54989670A97B41EF9A4A646B /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/NSRemoteJsonObject.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -364,6 +418,7 @@
 		};
 		2B47DE3716D75AD400BFF0ED /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 54989670A97B41EF9A4A646B /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/NSRemoteJsonObject.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
