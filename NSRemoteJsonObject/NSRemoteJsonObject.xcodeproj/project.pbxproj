@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0667D5DFA8AC47DC85FF4E8C /* libPods-NSRemoteJsonObjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A5A9C3315EBB4227B43F3C27 /* libPods-NSRemoteJsonObjectTests.a */; };
-		2AF0AFA747244C76A1722DB7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AD1D2D1A42F5418D9BD2FD14 /* libPods.a */; };
 		2B47DE1416D75AD400BFF0ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B47DE1316D75AD400BFF0ED /* Foundation.framework */; };
 		2B47DE1916D75AD400BFF0ED /* NSRemoteJsonObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B47DE1816D75AD400BFF0ED /* NSRemoteJsonObject.h */; };
 		2B47DE1B16D75AD400BFF0ED /* NSRemoteJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B47DE1A16D75AD400BFF0ED /* NSRemoteJsonObject.m */; };
@@ -56,10 +54,6 @@
 		2B47DE2E16D75AD400BFF0ED /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B47DE3016D75AD400BFF0ED /* NSRemoteJsonObjectTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NSRemoteJsonObjectTests.h; sourceTree = "<group>"; };
 		2B47DE3116D75AD400BFF0ED /* NSRemoteJsonObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NSRemoteJsonObjectTests.m; sourceTree = "<group>"; };
-		9A61116F49884F69AC64E9E4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
-		A5A9C3315EBB4227B43F3C27 /* libPods-NSRemoteJsonObjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NSRemoteJsonObjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		AD1D2D1A42F5418D9BD2FD14 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		F318331AAE0548D38BABDF08 /* Pods-NSRemoteJsonObjectTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NSRemoteJsonObjectTests.xcconfig"; path = "Pods/Pods-NSRemoteJsonObjectTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,7 +62,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B47DE1416D75AD400BFF0ED /* Foundation.framework in Frameworks */,
-				2AF0AFA747244C76A1722DB7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +73,6 @@
 				2B47DE2516D75AD400BFF0ED /* UIKit.framework in Frameworks */,
 				2B47DE2616D75AD400BFF0ED /* Foundation.framework in Frameworks */,
 				2B47DE2916D75AD400BFF0ED /* libNSRemoteJsonObject.a in Frameworks */,
-				0667D5DFA8AC47DC85FF4E8C /* libPods-NSRemoteJsonObjectTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,8 +86,6 @@
 				2B47DE2A16D75AD400BFF0ED /* NSRemoteJsonObjectTests */,
 				2B47DE1216D75AD400BFF0ED /* Frameworks */,
 				2B47DE1116D75AD400BFF0ED /* Products */,
-				9A61116F49884F69AC64E9E4 /* Pods.xcconfig */,
-				F318331AAE0548D38BABDF08 /* Pods-NSRemoteJsonObjectTests.xcconfig */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,8 +104,6 @@
 				2B47DE1316D75AD400BFF0ED /* Foundation.framework */,
 				2B47DE2216D75AD400BFF0ED /* SenTestingKit.framework */,
 				2B47DE2416D75AD400BFF0ED /* UIKit.framework */,
-				AD1D2D1A42F5418D9BD2FD14 /* libPods.a */,
-				A5A9C3315EBB4227B43F3C27 /* libPods-NSRemoteJsonObjectTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -167,7 +155,6 @@
 				2B47DE0C16D75AD400BFF0ED /* Sources */,
 				2B47DE0D16D75AD400BFF0ED /* Frameworks */,
 				2B47DE0E16D75AD400BFF0ED /* CopyFiles */,
-				9CB9CC037FF74740A30E899B /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -186,7 +173,6 @@
 				2B47DE1D16D75AD400BFF0ED /* Frameworks */,
 				2B47DE1E16D75AD400BFF0ED /* Resources */,
 				2B47DE1F16D75AD400BFF0ED /* ShellScript */,
-				52E28ABAD8F24050A47109CD /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -249,34 +235,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
-		};
-		52E28ABAD8F24050A47109CD /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-NSRemoteJsonObjectTests-resources.sh\"\n";
-		};
-		9CB9CC037FF74740A30E899B /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -343,7 +301,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -366,7 +324,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -374,7 +332,6 @@
 		};
 		2B47DE3616D75AD400BFF0ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A61116F49884F69AC64E9E4 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/NSRemoteJsonObject.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -387,7 +344,6 @@
 		};
 		2B47DE3716D75AD400BFF0ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A61116F49884F69AC64E9E4 /* Pods.xcconfig */;
 			buildSettings = {
 				DSTROOT = /tmp/NSRemoteJsonObject.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -400,9 +356,7 @@
 		};
 		2B47DE3916D75AD400BFF0ED /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F318331AAE0548D38BABDF08 /* Pods-NSRemoteJsonObjectTests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSRemoteJsonObject.app/NSRemoteJsonObjectTests";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -411,16 +365,13 @@
 				GCC_PREFIX_HEADER = "NSRemoteJsonObject/NSRemoteJsonObject-Prefix.pch";
 				INFOPLIST_FILE = "NSRemoteJsonObjectTests/NSRemoteJsonObjectTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
 		2B47DE3A16D75AD400BFF0ED /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F318331AAE0548D38BABDF08 /* Pods-NSRemoteJsonObjectTests.xcconfig */;
 			buildSettings = {
-				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/NSRemoteJsonObject.app/NSRemoteJsonObjectTests";
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
@@ -429,7 +380,6 @@
 				GCC_PREFIX_HEADER = "NSRemoteJsonObject/NSRemoteJsonObject-Prefix.pch";
 				INFOPLIST_FILE = "NSRemoteJsonObjectTests/NSRemoteJsonObjectTests-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
@@ -453,7 +403,6 @@
 				2B47DE3716D75AD400BFF0ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 		2B47DE3816D75AD400BFF0ED /* Build configuration list for PBXNativeTarget "NSRemoteJsonObjectTests" */ = {
 			isa = XCConfigurationList;
@@ -462,7 +411,6 @@
 				2B47DE3A16D75AD400BFF0ED /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
