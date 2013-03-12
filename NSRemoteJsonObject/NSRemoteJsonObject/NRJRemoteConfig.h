@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+
 
 @interface NRJRemoteConfig : NSObject
 @property(nonatomic,strong) NSString *baseurl;
