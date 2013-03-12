@@ -15,6 +15,7 @@
 		2B29FBAB16EF39E900FE1940 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBA616EF38D400FE1940 /* SystemConfiguration.framework */; };
 		2B29FBB216EF72F000FE1940 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBB116EF72F000FE1940 /* User.m */; };
 		2B29FBB816EF73C700FE1940 /* NSObject+NRJPropertyUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBB716EF73C700FE1940 /* NSObject+NRJPropertyUtil.m */; };
+		2B29FBBB16EF7A9D00FE1940 /* NRJRemoteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBBA16EF7A9D00FE1940 /* NRJRemoteConfig.m */; };
 		2B47DE1416D75AD400BFF0ED /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B47DE1316D75AD400BFF0ED /* Foundation.framework */; };
 		2B47DE1916D75AD400BFF0ED /* NSRemoteJsonObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B47DE1816D75AD400BFF0ED /* NSRemoteJsonObject.h */; };
 		2B47DE1B16D75AD400BFF0ED /* NSRemoteJsonObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B47DE1A16D75AD400BFF0ED /* NSRemoteJsonObject.m */; };
@@ -57,6 +58,8 @@
 		2B29FBB116EF72F000FE1940 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = classes/User.m; sourceTree = "<group>"; };
 		2B29FBB616EF73C700FE1940 /* NSObject+NRJPropertyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+NRJPropertyUtil.h"; sourceTree = "<group>"; };
 		2B29FBB716EF73C700FE1940 /* NSObject+NRJPropertyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+NRJPropertyUtil.m"; sourceTree = "<group>"; };
+		2B29FBB916EF7A9D00FE1940 /* NRJRemoteConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NRJRemoteConfig.h; sourceTree = "<group>"; };
+		2B29FBBA16EF7A9D00FE1940 /* NRJRemoteConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NRJRemoteConfig.m; sourceTree = "<group>"; };
 		2B47DE1016D75AD400BFF0ED /* libNSRemoteJsonObject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libNSRemoteJsonObject.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B47DE1316D75AD400BFF0ED /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B47DE1716D75AD400BFF0ED /* NSRemoteJsonObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSRemoteJsonObject-Prefix.pch"; sourceTree = "<group>"; };
@@ -154,6 +157,8 @@
 				2B47DE1616D75AD400BFF0ED /* Supporting Files */,
 				2B29FBB616EF73C700FE1940 /* NSObject+NRJPropertyUtil.h */,
 				2B29FBB716EF73C700FE1940 /* NSObject+NRJPropertyUtil.m */,
+				2B29FBB916EF7A9D00FE1940 /* NRJRemoteConfig.h */,
+				2B29FBBA16EF7A9D00FE1940 /* NRJRemoteConfig.m */,
 			);
 			path = NSRemoteJsonObject;
 			sourceTree = "<group>";
@@ -315,6 +320,7 @@
 			files = (
 				2B47DE1B16D75AD400BFF0ED /* NSRemoteJsonObject.m in Sources */,
 				2B29FBB816EF73C700FE1940 /* NSObject+NRJPropertyUtil.m in Sources */,
+				2B29FBBB16EF7A9D00FE1940 /* NRJRemoteConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

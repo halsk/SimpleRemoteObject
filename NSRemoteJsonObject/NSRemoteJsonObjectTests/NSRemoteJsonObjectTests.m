@@ -1,6 +1,7 @@
 #import "Kiwi.h"
 #import "User.h"
 #import "NSObject+NRJPropertyUtil.h"
+#import "NRJRemoteConfig.h"
 
 SPEC_BEGIN(PropertyUtil)
 
@@ -21,13 +22,32 @@ describe(@"PropertyUtil", ^{
 });
 
 SPEC_END
-SPEC_BEGIN(MathSpec)
 
-describe(@"Math", ^{
-    it(@"is pretty cool", ^{
-        NSUInteger a = 16;
-        NSUInteger b = 26;
-        [[theValue(a + b) should] equal:theValue(42)];
+SPEC_BEGIN(RemoteConfig)
+
+describe(@"RemoteConfig", ^{
+    context(@"read remote object", ^{
+        beforeAll(^{
+            [NRJRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should have api endpoint", ^{
+            [[[NRJRemoteConfig defaultConfig].baseurl should] equal:@"http://localhost:2000/"];
+        });
+    });
+});
+
+SPEC_END
+
+SPEC_BEGIN(RemoteObject)
+
+describe(@"RemoteConfig", ^{
+    context(@"read remote object", ^{
+        beforeAll(^{
+        });
+        
+        it(@"should have api endpoint", ^{
+        });
     });
 });
 
