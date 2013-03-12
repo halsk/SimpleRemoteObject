@@ -9,5 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface User : NSObject
-
+@property(nonatomic,retain) NSString *name;
+@property(nonatomic,retain) NSString *mail;
+@property(nonatomic) int age;
 @end
