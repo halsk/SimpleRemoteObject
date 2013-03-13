@@ -8,6 +8,7 @@
 #import "SRRemoteConfig.h"
 #import "RootObject.h"
 #import "NonArrayObject.h"
+#import "NonArrayRootObject.h"
 #import "Tag.h"
 
 
@@ -105,6 +106,15 @@ describe(@"RemoteConfig", ^{
             [[expectFutureValue(ret) shouldEventually] haveCountOf:3];
             [[expectFutureValue(((RootObject *)[ret objectAtIndex:0]).name) shouldEventually] equal:@"obj1"];
             [[expectFutureValue(((RootObject *)[ret objectAtIndex:1]).name) shouldEventually] equal:@"obj2"];
+        });
+        it(@"should read root object (and not array)", ^{
+            __block NSArray *ret;
+            [NonArrayRootObject fetchAsync:^(NSArray *allRemote, NSError *error) {
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:1];
+            [[expectFutureValue(((RootObject *)[ret objectAtIndex:0]).name) shouldEventually] equal:@"obj1"];
         });
     });
 });
