@@ -27,7 +27,13 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSLog(@"App.net Global Stream: %@", JSON);
-        NSArray *ret = [[self class] parseJSONArray:[JSON valueForKeyPath:[[self class] performSelector:@selector(resultKey)]]];
+        NSString *key = [[self class] performSelector:@selector(resultKey)];
+        NSArray *ret = nil;
+        if (key){
+            ret = [[self class] parseJSONArray:[JSON valueForKeyPath:key]];
+        }else{
+            ret = [[self class] parseJSONArray:JSON];
+        }
         completionBlock(ret,nil);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"App.net Error: %@", [error localizedDescription]);

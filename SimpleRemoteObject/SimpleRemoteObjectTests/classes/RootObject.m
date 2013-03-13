@@ -11,7 +11,7 @@
 @implementation RootObject
 
 +(NSString *)representUrl{
-    return @"root.json";
+    return @"rootObject.json";
 }
 +(NSString *)resultKey{
     return nil;
