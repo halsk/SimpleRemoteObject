@@ -16,6 +16,8 @@
 		2B29FBF716F0126000FE1940 /* libSimpleRemoteObject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBDE16F0126000FE1940 /* libSimpleRemoteObject.a */; };
 		2B29FBFD16F0126000FE1940 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2B29FBFB16F0126000FE1940 /* InfoPlist.strings */; };
 		2B29FC0016F0126000FE1940 /* SimpleRemoteObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBFF16F0126000FE1940 /* SimpleRemoteObjectTests.m */; };
+		2B29FC0E16F0158A00FE1940 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC0B16F0158A00FE1940 /* Tag.m */; };
+		2B29FC0F16F0158A00FE1940 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC0D16F0158A00FE1940 /* User.m */; };
 		DB9018F3AED349E3BFFA66BD /* libPods-SimpleRemoteObjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B864C704D844448510F48E /* libPods-SimpleRemoteObjectTests.a */; };
 		ED640E208F8A49C0BFAF0A62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1126892D7EB748BABDA1C36E /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,10 @@
 		2B29FBFA16F0126000FE1940 /* SimpleRemoteObjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleRemoteObjectTests-Info.plist"; sourceTree = "<group>"; };
 		2B29FBFC16F0126000FE1940 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2B29FBFF16F0126000FE1940 /* SimpleRemoteObjectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleRemoteObjectTests.m; sourceTree = "<group>"; };
+		2B29FC0A16F0158A00FE1940 /* Tag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Tag.h; path = classes/Tag.h; sourceTree = "<group>"; };
+		2B29FC0B16F0158A00FE1940 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tag.m; path = classes/Tag.m; sourceTree = "<group>"; };
+		2B29FC0C16F0158A00FE1940 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = classes/User.h; sourceTree = "<group>"; };
+		2B29FC0D16F0158A00FE1940 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = classes/User.m; sourceTree = "<group>"; };
 		40C56472478B4BB1A115F2BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BC9E2480BB574A91A00BFAF1 /* Pods-SimpleRemoteObjectTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRemoteObjectTests.xcconfig"; path = "Pods/Pods-SimpleRemoteObjectTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -141,6 +147,7 @@
 			isa = PBXGroup;
 			children = (
 				2B29FBFF16F0126000FE1940 /* SimpleRemoteObjectTests.m */,
+				2B29FC0916F0154100FE1940 /* classes */,
 				2B29FBF916F0126000FE1940 /* Supporting Files */,
 			);
 			path = SimpleRemoteObjectTests;
@@ -153,6 +160,17 @@
 				2B29FBFB16F0126000FE1940 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		2B29FC0916F0154100FE1940 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				2B29FC0A16F0158A00FE1940 /* Tag.h */,
+				2B29FC0B16F0158A00FE1940 /* Tag.m */,
+				2B29FC0C16F0158A00FE1940 /* User.h */,
+				2B29FC0D16F0158A00FE1940 /* User.m */,
+			);
+			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +310,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B29FC0016F0126000FE1940 /* SimpleRemoteObjectTests.m in Sources */,
+				2B29FC0E16F0158A00FE1940 /* Tag.m in Sources */,
+				2B29FC0F16F0158A00FE1940 /* User.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
