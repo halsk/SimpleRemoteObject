@@ -18,6 +18,7 @@
 		2B29FC0016F0126000FE1940 /* SimpleRemoteObjectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBFF16F0126000FE1940 /* SimpleRemoteObjectTests.m */; };
 		2B29FC0E16F0158A00FE1940 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC0B16F0158A00FE1940 /* Tag.m */; };
 		2B29FC0F16F0158A00FE1940 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC0D16F0158A00FE1940 /* User.m */; };
+		2B29FC1416F0166A00FE1940 /* NSObject+NRJPropertyUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC1316F0166A00FE1940 /* NSObject+NRJPropertyUtil.m */; };
 		DB9018F3AED349E3BFFA66BD /* libPods-SimpleRemoteObjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B864C704D844448510F48E /* libPods-SimpleRemoteObjectTests.a */; };
 		ED640E208F8A49C0BFAF0A62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1126892D7EB748BABDA1C36E /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -51,8 +52,8 @@
 		2B29FBDE16F0126000FE1940 /* libSimpleRemoteObject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimpleRemoteObject.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B29FBE116F0126000FE1940 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2B29FBE516F0126000FE1940 /* SimpleRemoteObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleRemoteObject-Prefix.pch"; sourceTree = "<group>"; };
-		2B29FBE616F0126000FE1940 /* SimpleRemoteObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SimpleRemoteObject.h; sourceTree = "<group>"; };
-		2B29FBE816F0126000FE1940 /* SimpleRemoteObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SimpleRemoteObject.m; sourceTree = "<group>"; };
+		2B29FBE616F0126000FE1940 /* SimpleRemoteObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SimpleRemoteObject.h; path = classes/SimpleRemoteObject.h; sourceTree = "<group>"; };
+		2B29FBE816F0126000FE1940 /* SimpleRemoteObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SimpleRemoteObject.m; path = classes/SimpleRemoteObject.m; sourceTree = "<group>"; };
 		2B29FBEF16F0126000FE1940 /* SimpleRemoteObjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleRemoteObjectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B29FBF016F0126000FE1940 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2B29FBF216F0126000FE1940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -63,6 +64,8 @@
 		2B29FC0B16F0158A00FE1940 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tag.m; path = classes/Tag.m; sourceTree = "<group>"; };
 		2B29FC0C16F0158A00FE1940 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = classes/User.h; sourceTree = "<group>"; };
 		2B29FC0D16F0158A00FE1940 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = classes/User.m; sourceTree = "<group>"; };
+		2B29FC1216F0166A00FE1940 /* NSObject+NRJPropertyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+NRJPropertyUtil.h"; path = "classes/utilities/NSObject+NRJPropertyUtil.h"; sourceTree = "<group>"; };
+		2B29FC1316F0166A00FE1940 /* NSObject+NRJPropertyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+NRJPropertyUtil.m"; path = "classes/utilities/NSObject+NRJPropertyUtil.m"; sourceTree = "<group>"; };
 		40C56472478B4BB1A115F2BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BC9E2480BB574A91A00BFAF1 /* Pods-SimpleRemoteObjectTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRemoteObjectTests.xcconfig"; path = "Pods/Pods-SimpleRemoteObjectTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -128,8 +131,7 @@
 		2B29FBE316F0126000FE1940 /* SimpleRemoteObject */ = {
 			isa = PBXGroup;
 			children = (
-				2B29FBE616F0126000FE1940 /* SimpleRemoteObject.h */,
-				2B29FBE816F0126000FE1940 /* SimpleRemoteObject.m */,
+				2B29FC1116F0165C00FE1940 /* classes */,
 				2B29FBE416F0126000FE1940 /* Supporting Files */,
 			);
 			path = SimpleRemoteObject;
@@ -169,6 +171,25 @@
 				2B29FC0B16F0158A00FE1940 /* Tag.m */,
 				2B29FC0C16F0158A00FE1940 /* User.h */,
 				2B29FC0D16F0158A00FE1940 /* User.m */,
+			);
+			name = classes;
+			sourceTree = "<group>";
+		};
+		2B29FC1016F0164C00FE1940 /* utilities */ = {
+			isa = PBXGroup;
+			children = (
+				2B29FC1216F0166A00FE1940 /* NSObject+NRJPropertyUtil.h */,
+				2B29FC1316F0166A00FE1940 /* NSObject+NRJPropertyUtil.m */,
+			);
+			name = utilities;
+			sourceTree = "<group>";
+		};
+		2B29FC1116F0165C00FE1940 /* classes */ = {
+			isa = PBXGroup;
+			children = (
+				2B29FBE616F0126000FE1940 /* SimpleRemoteObject.h */,
+				2B29FBE816F0126000FE1940 /* SimpleRemoteObject.m */,
+				2B29FC1016F0164C00FE1940 /* utilities */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -302,6 +323,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B29FBE916F0126000FE1940 /* SimpleRemoteObject.m in Sources */,
+				2B29FC1416F0166A00FE1940 /* NSObject+NRJPropertyUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
