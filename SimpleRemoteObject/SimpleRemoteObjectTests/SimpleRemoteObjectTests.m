@@ -6,6 +6,7 @@
 #import "NSObject+SRPropertyUtil.h"
 #import "SRSimpleRemoteObject.h"
 #import "SRRemoteConfig.h"
+#import "RootObject.h"
 #import "Tag.h"
 
 
@@ -70,4 +71,34 @@ describe(@"RemoteConfig", ^{
     });
 });
 
+describe(@"RemoteConfig", ^{
+    context(@"read root object", ^{
+        beforeAll(^{
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should read root object", ^{
+            __block NSArray *ret;
+            [RootObject fetchAsync:^(NSArray *allRemote, NSError *error) {
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:3];
+            [[expectFutureValue(((RootObject *)[ret objectAtIndex:0]).name) shouldEventually] equal:@"obj1"];
+            [[expectFutureValue(((RootObject *)[ret objectAtIndex:1]).name) shouldEventually] equal:@"obj2"];
+        });
+    });
+});
+
+describe(@"RemoteConfig", ^{
+    context(@"read remote echo object", ^{
+        beforeAll(^{
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should read remote json with params", ^{
+            
+        });
+    });
+});
 SPEC_END

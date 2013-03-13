@@ -9,5 +9,5 @@
 #import "SRSimpleRemoteObject.h"
 
 @interface RootObject : SRSimpleRemoteObject
-
+@property(nonatomic,strong) NSString *name;
 @end

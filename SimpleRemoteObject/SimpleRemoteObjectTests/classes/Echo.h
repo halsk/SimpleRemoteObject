@@ -9,5 +9,6 @@
 #import "SRSimpleRemoteObject.h"
 
 @interface Echo : SRSimpleRemoteObject
+@property(nonatomic,strong) NSString *hoge;
 
 @end

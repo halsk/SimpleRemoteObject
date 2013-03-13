@@ -22,6 +22,8 @@
 		2B29FC1716F0173400FE1940 /* SRRemoteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC1616F0173400FE1940 /* SRRemoteConfig.m */; };
 		2B29FC1916F018C500FE1940 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FC1816F018C500FE1940 /* SystemConfiguration.framework */; };
 		2B29FC1B16F018CD00FE1940 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FC1A16F018CD00FE1940 /* MobileCoreServices.framework */; };
+		2BF1ED4216F04CA1002F7EE8 /* Echo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF1ED4116F04CA1002F7EE8 /* Echo.m */; };
+		2BF1ED4516F04D6D002F7EE8 /* RootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF1ED4416F04D6D002F7EE8 /* RootObject.m */; };
 		DB9018F3AED349E3BFFA66BD /* libPods-SimpleRemoteObjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B864C704D844448510F48E /* libPods-SimpleRemoteObjectTests.a */; };
 		ED640E208F8A49C0BFAF0A62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1126892D7EB748BABDA1C36E /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -73,6 +75,10 @@
 		2B29FC1616F0173400FE1940 /* SRRemoteConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRRemoteConfig.m; path = classes/SRRemoteConfig.m; sourceTree = "<group>"; };
 		2B29FC1816F018C500FE1940 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2B29FC1A16F018CD00FE1940 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2BF1ED4016F04CA1002F7EE8 /* Echo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Echo.h; path = classes/Echo.h; sourceTree = "<group>"; };
+		2BF1ED4116F04CA1002F7EE8 /* Echo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Echo.m; path = classes/Echo.m; sourceTree = "<group>"; };
+		2BF1ED4316F04D6D002F7EE8 /* RootObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootObject.h; path = classes/RootObject.h; sourceTree = "<group>"; };
+		2BF1ED4416F04D6D002F7EE8 /* RootObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RootObject.m; path = classes/RootObject.m; sourceTree = "<group>"; };
 		40C56472478B4BB1A115F2BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BC9E2480BB574A91A00BFAF1 /* Pods-SimpleRemoteObjectTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRemoteObjectTests.xcconfig"; path = "Pods/Pods-SimpleRemoteObjectTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -182,6 +188,10 @@
 				2B29FC0B16F0158A00FE1940 /* Tag.m */,
 				2B29FC0C16F0158A00FE1940 /* User.h */,
 				2B29FC0D16F0158A00FE1940 /* User.m */,
+				2BF1ED4016F04CA1002F7EE8 /* Echo.h */,
+				2BF1ED4116F04CA1002F7EE8 /* Echo.m */,
+				2BF1ED4316F04D6D002F7EE8 /* RootObject.h */,
+				2BF1ED4416F04D6D002F7EE8 /* RootObject.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -348,6 +358,8 @@
 				2B29FC0016F0126000FE1940 /* SimpleRemoteObjectTests.m in Sources */,
 				2B29FC0E16F0158A00FE1940 /* Tag.m in Sources */,
 				2B29FC0F16F0158A00FE1940 /* User.m in Sources */,
+				2BF1ED4216F04CA1002F7EE8 /* Echo.m in Sources */,
+				2BF1ED4516F04D6D002F7EE8 /* RootObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,4 +10,10 @@
 
 @implementation RootObject
 
++(NSString *)representUrl{
+    return @"root.json";
+}
++(NSString *)resultKey{
+    return nil;
+}
 @end

@@ -10,4 +10,11 @@
 
 @implementation Echo
 
++(NSString *)representUrl{
+    return @"tags.json";
+}
++(NSString *)resultKey{
+    return nil;
+}
+
 @end
