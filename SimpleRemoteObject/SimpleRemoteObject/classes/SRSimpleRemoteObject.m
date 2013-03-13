@@ -22,6 +22,23 @@
     NSString *strurl = [NSString stringWithFormat:@"%@%@", [SRRemoteConfig defaultConfig].baseurl, [[self class] performSelector:@selector(representUrl)]];
     [[self class] performSelector:@selector(fetchURL:async:) withObject:strurl withObject:completionBlock];
 }
+/**
+ // read data from specified URI with parameters
+ */
++(void)fetchAsyncWithParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock{
+    NSString *path = [[self class] performSelector:@selector(representUrl)];
+    for (NSString *key in [params allKeys]){
+        if ([path rangeOfString:@"?"].location == NSNotFound){
+            path = [path stringByAppendingFormat:@"?%@=%@", key, [params objectForKey:key]];
+        }else{
+            path = [path stringByAppendingFormat:@"&%@=%@", key, [params objectForKey:key]];
+        }
+    }
+    
+    NSString *strurl = [NSString stringWithFormat:@"%@%@", [SRRemoteConfig defaultConfig].baseurl, path];
+    NSLog(@"call:%@", strurl);
+    [[self class] performSelector:@selector(fetchURL:async:) withObject:strurl withObject:completionBlock];
+}
 +(void)fetchURL:(NSString *)strurl async:(SRFetchCompletionBlock)completionBlock{
     NSURL *url = [NSURL URLWithString:strurl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];

@@ -14,6 +14,8 @@ typedef void(^SRFetchCompletionBlock)(NSArray *allRemote, NSError *error);
 @property (nonatomic, strong) NSNumber* remoteId;
 
 +(void)fetchAsync:(SRFetchCompletionBlock)completionBlock;
++(void)fetchAsyncWithParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock;
+
 
 /*
  // should override on subclass

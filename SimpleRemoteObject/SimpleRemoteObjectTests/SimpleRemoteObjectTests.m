@@ -10,6 +10,7 @@
 #import "NonArrayObject.h"
 #import "NonArrayRootObject.h"
 #import "Tag.h"
+#import "Echo.h"
 
 
 SPEC_BEGIN(PropertyUtil)
@@ -126,7 +127,14 @@ describe(@"RemoteConfig", ^{
         });
         
         it(@"should read remote json with params", ^{
-            
+            NSDictionary *params = @{@"hoge":@"fuga"};
+            __block NSArray *ret;
+            [Echo fetchAsyncWithParams:params async:^(NSArray *allRemote, NSError *error){
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:1];
+            [[expectFutureValue(((Echo *)[ret objectAtIndex:0]).hoge) shouldEventually] equal:@"fuga"];
         });
     });
 });

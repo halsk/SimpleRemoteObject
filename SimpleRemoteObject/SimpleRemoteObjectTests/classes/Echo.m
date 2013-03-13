@@ -11,7 +11,7 @@
 @implementation Echo
 
 +(NSString *)representUrl{
-    return @"tags.json";
+    return @"echo";
 }
 +(NSString *)resultKey{
     return nil;
