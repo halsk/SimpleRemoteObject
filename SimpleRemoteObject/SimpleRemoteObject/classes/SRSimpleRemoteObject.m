@@ -38,7 +38,11 @@
             }
             ret = [[self class] parseJSONArray:obj];
         }else{
-            ret = [[self class] parseJSONArray:JSON];
+            if ([JSON isKindOfClass:[NSArray class]]){
+                ret = [[self class] parseJSONArray:JSON];
+            }else{
+                ret = [[self class] parseJSONArray:[NSArray arrayWithObject:JSON]];
+            }
         }
         completionBlock(ret,nil);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
