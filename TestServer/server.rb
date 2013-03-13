@@ -1,6 +1,7 @@
 # -*- coding: UTF-8 -*-
 
 require 'webrick'
+require 'json'
 
 include WEBrick
 port = 2000;
@@ -31,6 +32,10 @@ server.mount_proc("/") { |req, res|
   res["Content-Type"] = content_type
 }
 
+server.mount_proc("/echo") { |req, res|
+  res.body = JSON.generate(req.query)
+  res["Content-Type"] = "application/json; charset=UTF8"
+}
 trap("INT"){ server.shutdown }
 server.start
 
