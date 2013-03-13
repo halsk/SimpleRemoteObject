@@ -3,9 +3,9 @@
 #import "User.h"
 
 
-#import "NSObject+NRJPropertyUtil.h"
-#import "NRJRemoteConfig.h"
-#import "NRJRemoteJsonObject.h"
+#import "NSObject+SRPropertyUtil.h"
+#import "SRSimpleRemoteObject.h"
+#import "SRRemoteConfig.h"
 #import "Tag.h"
 
 
@@ -34,11 +34,11 @@ SPEC_BEGIN(RemoteConfig)
 describe(@"RemoteConfig", ^{
     context(@"read remote object", ^{
         beforeAll(^{
-            [NRJRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
         });
         
         it(@"should have api endpoint", ^{
-            [[[NRJRemoteConfig defaultConfig].baseurl should] equal:@"http://localhost:2000/"];
+            [[[SRRemoteConfig defaultConfig].baseurl should] equal:@"http://localhost:2000/"];
         });
     });
 });
@@ -50,7 +50,7 @@ SPEC_BEGIN(RemoteObject)
 describe(@"RemoteConfig", ^{
     context(@"read remote tag object", ^{
         beforeAll(^{
-            [NRJRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
         });
         
         it(@"should read remote json", ^{
