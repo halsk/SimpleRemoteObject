@@ -30,7 +30,13 @@
         NSString *key = [[self class] performSelector:@selector(resultKey)];
         NSArray *ret = nil;
         if (key){
-            ret = [[self class] parseJSONArray:[JSON valueForKeyPath:key]];
+            NSArray *obj = nil;
+            if ([[JSON valueForKeyPath:key] isKindOfClass:[NSArray class]]){
+                obj = [JSON valueForKeyPath:key];
+            }else{
+                obj = [NSArray arrayWithObject:[JSON valueForKeyPath:key]];
+            }
+            ret = [[self class] parseJSONArray:obj];
         }else{
             ret = [[self class] parseJSONArray:JSON];
         }

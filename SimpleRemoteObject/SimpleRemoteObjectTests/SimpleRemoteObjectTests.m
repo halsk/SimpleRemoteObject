@@ -7,6 +7,7 @@
 #import "SRSimpleRemoteObject.h"
 #import "SRRemoteConfig.h"
 #import "RootObject.h"
+#import "NonArrayObject.h"
 #import "Tag.h"
 
 
