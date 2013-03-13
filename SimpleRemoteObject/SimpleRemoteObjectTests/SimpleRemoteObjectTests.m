@@ -72,6 +72,24 @@ describe(@"RemoteConfig", ^{
 });
 
 describe(@"RemoteConfig", ^{
+    context(@"read non-array object", ^{
+        beforeAll(^{
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should read non-array object", ^{
+            __block NSArray *ret;
+            [NonArrayObject fetchAsync:^(NSArray *allRemote, NSError *error) {
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:1];
+            [[expectFutureValue(((RootObject *)[ret objectAtIndex:0]).name) shouldEventually] equal:@"obj1"];
+        });
+    });
+});
+
+describe(@"RemoteConfig", ^{
     context(@"read root object", ^{
         beforeAll(^{
             [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
