@@ -49,7 +49,6 @@ SimpleRemoteObject is supporting cocoapods.
 Please add below line to your Podfile and run `pod install`.
 
 ```
-pod 'AFNetworking' # if you have not installed it.
 pod 'SimpleRemoteObject'
 ```
 
