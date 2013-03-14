@@ -7,7 +7,6 @@
 //
 
 #import "SRSimpleRemoteObject.h"
-#import "SRRemoteConfig.h"
 #import "AFNetworking.h"
 #import "NSObject+SRPropertyUtil.h"
 

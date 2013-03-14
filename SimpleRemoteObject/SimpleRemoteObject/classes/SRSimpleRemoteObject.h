@@ -7,6 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SRRemoteConfig.h"
+
 typedef void(^SRFetchCompletionBlock)(NSArray *allRemote, NSError *error);
 
 
