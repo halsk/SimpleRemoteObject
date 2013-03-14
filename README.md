@@ -156,6 +156,10 @@ Contribution
 Bug report: please make a ticket here.
 Pull request: of course, you are welcome!
 
+License
+-------
+SimpleRemoteObject is available under the MIT license. See the LICENSE file for more info.
+
 Credits
 -------
 
