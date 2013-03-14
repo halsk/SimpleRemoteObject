@@ -36,7 +36,8 @@ Feel free to add your own usecases and contribute! ;)
 Dependencies
 --------
 
-AFNetworking
+* iOS 5.1+
+* AFNetworking
 
 
 Getting started
@@ -154,3 +155,11 @@ Contribution
 
 Bug report: please make a ticket here.
 Pull request: of course, you are welcome!
+
+Credits
+-------
+
+Version 0.1.0
+
+SimpleRemoteObject is written and maintained by Hal Seki. I've learned and inspired by NSRails project, many thanks there!
+
