@@ -58,9 +58,9 @@
 		26B864C704D844448510F48E /* libPods-SimpleRemoteObjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleRemoteObjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B29FBDE16F0126000FE1940 /* libSimpleRemoteObject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimpleRemoteObject.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B29FBE116F0126000FE1940 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2B29FBE516F0126000FE1940 /* SimpleRemoteObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SimpleRemoteObject-Prefix.pch"; path = "../Supporting Files/SimpleRemoteObject-Prefix.pch"; sourceTree = "<group>"; };
-		2B29FBE616F0126000FE1940 /* SRRemoteConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SRRemoteConfig.h; path = ../Classes/SRRemoteConfig.h; sourceTree = "<group>"; };
-		2B29FBE816F0126000FE1940 /* SRRemoteConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SRRemoteConfig.m; path = ../Classes/SRRemoteConfig.m; sourceTree = "<group>"; };
+		2B29FBE516F0126000FE1940 /* SimpleRemoteObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SimpleRemoteObject-Prefix.pch"; path = "Supporting Files/SimpleRemoteObject-Prefix.pch"; sourceTree = SOURCE_ROOT; };
+		2B29FBE616F0126000FE1940 /* SRRemoteConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SRRemoteConfig.h; path = Classes/SRRemoteConfig.h; sourceTree = SOURCE_ROOT; };
+		2B29FBE816F0126000FE1940 /* SRRemoteConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SRRemoteConfig.m; path = Classes/SRRemoteConfig.m; sourceTree = SOURCE_ROOT; };
 		2B29FBEF16F0126000FE1940 /* SimpleRemoteObjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleRemoteObjectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B29FBF016F0126000FE1940 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2B29FBF216F0126000FE1940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -71,10 +71,10 @@
 		2B29FC0B16F0158A00FE1940 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tag.m; path = classes/Tag.m; sourceTree = "<group>"; };
 		2B29FC0C16F0158A00FE1940 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = classes/User.h; sourceTree = "<group>"; };
 		2B29FC0D16F0158A00FE1940 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = classes/User.m; sourceTree = "<group>"; };
-		2B29FC1216F0166A00FE1940 /* NSObject+SRPropertyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SRPropertyUtil.h"; path = "Classes/utilities/NSObject+SRPropertyUtil.h"; sourceTree = "<group>"; };
-		2B29FC1316F0166A00FE1940 /* NSObject+SRPropertyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SRPropertyUtil.m"; path = "Classes/utilities/NSObject+SRPropertyUtil.m"; sourceTree = "<group>"; };
-		2B29FC1516F0173400FE1940 /* SRSimpleRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRSimpleRemoteObject.h; path = ../Classes/SRSimpleRemoteObject.h; sourceTree = "<group>"; };
-		2B29FC1616F0173400FE1940 /* SRSimpleRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRSimpleRemoteObject.m; path = ../Classes/SRSimpleRemoteObject.m; sourceTree = "<group>"; };
+		2B29FC1216F0166A00FE1940 /* NSObject+SRPropertyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SRPropertyUtil.h"; path = "Classes/utilities/NSObject+SRPropertyUtil.h"; sourceTree = SOURCE_ROOT; };
+		2B29FC1316F0166A00FE1940 /* NSObject+SRPropertyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SRPropertyUtil.m"; path = "Classes/utilities/NSObject+SRPropertyUtil.m"; sourceTree = SOURCE_ROOT; };
+		2B29FC1516F0173400FE1940 /* SRSimpleRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRSimpleRemoteObject.h; path = Classes/SRSimpleRemoteObject.h; sourceTree = SOURCE_ROOT; };
+		2B29FC1616F0173400FE1940 /* SRSimpleRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRSimpleRemoteObject.m; path = Classes/SRSimpleRemoteObject.m; sourceTree = SOURCE_ROOT; };
 		2B29FC1816F018C500FE1940 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2B29FC1A16F018CD00FE1940 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2BF1ED4016F04CA1002F7EE8 /* Echo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Echo.h; path = classes/Echo.h; sourceTree = "<group>"; };
@@ -449,7 +449,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/SimpleRemoteObject.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimpleRemoteObject/SimpleRemoteObject-Prefix.pch";
+				GCC_PREFIX_HEADER = "Supporting Files/SimpleRemoteObject-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -462,7 +462,7 @@
 			buildSettings = {
 				DSTROOT = /tmp/SimpleRemoteObject.dst;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimpleRemoteObject/SimpleRemoteObject-Prefix.pch";
+				GCC_PREFIX_HEADER = "Supporting Files/SimpleRemoteObject-Prefix.pch";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
@@ -478,7 +478,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimpleRemoteObject/SimpleRemoteObject-Prefix.pch";
+				GCC_PREFIX_HEADER = "Supporting Files/SimpleRemoteObject-Prefix.pch";
 				INFOPLIST_FILE = "SimpleRemoteObjectTests/SimpleRemoteObjectTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
@@ -499,7 +499,7 @@
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "SimpleRemoteObject/SimpleRemoteObject-Prefix.pch";
+				GCC_PREFIX_HEADER = "Supporting Files/SimpleRemoteObject-Prefix.pch";
 				INFOPLIST_FILE = "SimpleRemoteObjectTests/SimpleRemoteObjectTests-Info.plist";
 				OTHER_LDFLAGS = (
 					"-ObjC",
