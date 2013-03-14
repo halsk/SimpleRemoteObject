@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		2B29FBE216F0126000FE1940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBE116F0126000FE1940 /* Foundation.framework */; };
-		2B29FBE716F0126000FE1940 /* SRSimpleRemoteObject.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B29FBE616F0126000FE1940 /* SRSimpleRemoteObject.h */; };
-		2B29FBE916F0126000FE1940 /* SRSimpleRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBE816F0126000FE1940 /* SRSimpleRemoteObject.m */; };
+		2B29FBE716F0126000FE1940 /* SRRemoteConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B29FBE616F0126000FE1940 /* SRRemoteConfig.h */; };
+		2B29FBE916F0126000FE1940 /* SRRemoteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBE816F0126000FE1940 /* SRRemoteConfig.m */; };
 		2B29FBF116F0126000FE1940 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBF016F0126000FE1940 /* SenTestingKit.framework */; };
 		2B29FBF316F0126000FE1940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBF216F0126000FE1940 /* UIKit.framework */; };
 		2B29FBF416F0126000FE1940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBE116F0126000FE1940 /* Foundation.framework */; };
@@ -19,7 +19,7 @@
 		2B29FC0E16F0158A00FE1940 /* Tag.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC0B16F0158A00FE1940 /* Tag.m */; };
 		2B29FC0F16F0158A00FE1940 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC0D16F0158A00FE1940 /* User.m */; };
 		2B29FC1416F0166A00FE1940 /* NSObject+SRPropertyUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC1316F0166A00FE1940 /* NSObject+SRPropertyUtil.m */; };
-		2B29FC1716F0173400FE1940 /* SRRemoteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC1616F0173400FE1940 /* SRRemoteConfig.m */; };
+		2B29FC1716F0173400FE1940 /* SRSimpleRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC1616F0173400FE1940 /* SRSimpleRemoteObject.m */; };
 		2B29FC1916F018C500FE1940 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FC1816F018C500FE1940 /* SystemConfiguration.framework */; };
 		2B29FC1B16F018CD00FE1940 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FC1A16F018CD00FE1940 /* MobileCoreServices.framework */; };
 		2BF1ED4216F04CA1002F7EE8 /* Echo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF1ED4116F04CA1002F7EE8 /* Echo.m */; };
@@ -47,7 +47,7 @@
 			dstPath = "include/${PRODUCT_NAME}";
 			dstSubfolderSpec = 16;
 			files = (
-				2B29FBE716F0126000FE1940 /* SRSimpleRemoteObject.h in CopyFiles */,
+				2B29FBE716F0126000FE1940 /* SRRemoteConfig.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,9 +58,9 @@
 		26B864C704D844448510F48E /* libPods-SimpleRemoteObjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SimpleRemoteObjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B29FBDE16F0126000FE1940 /* libSimpleRemoteObject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSimpleRemoteObject.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B29FBE116F0126000FE1940 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		2B29FBE516F0126000FE1940 /* SimpleRemoteObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SimpleRemoteObject-Prefix.pch"; sourceTree = "<group>"; };
-		2B29FBE616F0126000FE1940 /* SRSimpleRemoteObject.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SRSimpleRemoteObject.h; path = classes/SRSimpleRemoteObject.h; sourceTree = "<group>"; };
-		2B29FBE816F0126000FE1940 /* SRSimpleRemoteObject.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SRSimpleRemoteObject.m; path = classes/SRSimpleRemoteObject.m; sourceTree = "<group>"; };
+		2B29FBE516F0126000FE1940 /* SimpleRemoteObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SimpleRemoteObject-Prefix.pch"; path = "../Supporting Files/SimpleRemoteObject-Prefix.pch"; sourceTree = "<group>"; };
+		2B29FBE616F0126000FE1940 /* SRRemoteConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SRRemoteConfig.h; path = ../Classes/SRRemoteConfig.h; sourceTree = "<group>"; };
+		2B29FBE816F0126000FE1940 /* SRRemoteConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SRRemoteConfig.m; path = ../Classes/SRRemoteConfig.m; sourceTree = "<group>"; };
 		2B29FBEF16F0126000FE1940 /* SimpleRemoteObjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleRemoteObjectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B29FBF016F0126000FE1940 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		2B29FBF216F0126000FE1940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -71,10 +71,10 @@
 		2B29FC0B16F0158A00FE1940 /* Tag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Tag.m; path = classes/Tag.m; sourceTree = "<group>"; };
 		2B29FC0C16F0158A00FE1940 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = User.h; path = classes/User.h; sourceTree = "<group>"; };
 		2B29FC0D16F0158A00FE1940 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = User.m; path = classes/User.m; sourceTree = "<group>"; };
-		2B29FC1216F0166A00FE1940 /* NSObject+SRPropertyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SRPropertyUtil.h"; path = "classes/utilities/NSObject+SRPropertyUtil.h"; sourceTree = "<group>"; };
-		2B29FC1316F0166A00FE1940 /* NSObject+SRPropertyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SRPropertyUtil.m"; path = "classes/utilities/NSObject+SRPropertyUtil.m"; sourceTree = "<group>"; };
-		2B29FC1516F0173400FE1940 /* SRRemoteConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRRemoteConfig.h; path = classes/SRRemoteConfig.h; sourceTree = "<group>"; };
-		2B29FC1616F0173400FE1940 /* SRRemoteConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRRemoteConfig.m; path = classes/SRRemoteConfig.m; sourceTree = "<group>"; };
+		2B29FC1216F0166A00FE1940 /* NSObject+SRPropertyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+SRPropertyUtil.h"; path = "Classes/utilities/NSObject+SRPropertyUtil.h"; sourceTree = "<group>"; };
+		2B29FC1316F0166A00FE1940 /* NSObject+SRPropertyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+SRPropertyUtil.m"; path = "Classes/utilities/NSObject+SRPropertyUtil.m"; sourceTree = "<group>"; };
+		2B29FC1516F0173400FE1940 /* SRSimpleRemoteObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRSimpleRemoteObject.h; path = ../Classes/SRSimpleRemoteObject.h; sourceTree = "<group>"; };
+		2B29FC1616F0173400FE1940 /* SRSimpleRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRSimpleRemoteObject.m; path = ../Classes/SRSimpleRemoteObject.m; sourceTree = "<group>"; };
 		2B29FC1816F018C500FE1940 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2B29FC1A16F018CD00FE1940 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		2BF1ED4016F04CA1002F7EE8 /* Echo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Echo.h; path = classes/Echo.h; sourceTree = "<group>"; };
@@ -121,7 +121,7 @@
 			children = (
 				2B29FC1A16F018CD00FE1940 /* MobileCoreServices.framework */,
 				2B29FC1816F018C500FE1940 /* SystemConfiguration.framework */,
-				2B29FBE316F0126000FE1940 /* SimpleRemoteObject */,
+				2B29FBE316F0126000FE1940 /* Classes */,
 				2B29FBF816F0126000FE1940 /* SimpleRemoteObjectTests */,
 				2B29FBE016F0126000FE1940 /* Frameworks */,
 				2B29FBDF16F0126000FE1940 /* Products */,
@@ -151,12 +151,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2B29FBE316F0126000FE1940 /* SimpleRemoteObject */ = {
+		2B29FBE316F0126000FE1940 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2B29FC1116F0165C00FE1940 /* classes */,
+				2B29FC1516F0173400FE1940 /* SRSimpleRemoteObject.h */,
+				2B29FC1616F0173400FE1940 /* SRSimpleRemoteObject.m */,
+				2B29FBE616F0126000FE1940 /* SRRemoteConfig.h */,
+				2B29FBE816F0126000FE1940 /* SRRemoteConfig.m */,
+				2B29FC1016F0164C00FE1940 /* utilities */,
 				2B29FBE416F0126000FE1940 /* Supporting Files */,
 			);
+			name = Classes;
 			path = SimpleRemoteObject;
 			sourceTree = "<group>";
 		};
@@ -213,18 +218,6 @@
 				2B29FC1316F0166A00FE1940 /* NSObject+SRPropertyUtil.m */,
 			);
 			name = utilities;
-			sourceTree = "<group>";
-		};
-		2B29FC1116F0165C00FE1940 /* classes */ = {
-			isa = PBXGroup;
-			children = (
-				2B29FC1516F0173400FE1940 /* SRRemoteConfig.h */,
-				2B29FC1616F0173400FE1940 /* SRRemoteConfig.m */,
-				2B29FBE616F0126000FE1940 /* SRSimpleRemoteObject.h */,
-				2B29FBE816F0126000FE1940 /* SRSimpleRemoteObject.m */,
-				2B29FC1016F0164C00FE1940 /* utilities */,
-			);
-			name = classes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -355,9 +348,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B29FBE916F0126000FE1940 /* SRSimpleRemoteObject.m in Sources */,
+				2B29FBE916F0126000FE1940 /* SRRemoteConfig.m in Sources */,
 				2B29FC1416F0166A00FE1940 /* NSObject+SRPropertyUtil.m in Sources */,
-				2B29FC1716F0173400FE1940 /* SRRemoteConfig.m in Sources */,
+				2B29FC1716F0173400FE1940 /* SRSimpleRemoteObject.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
