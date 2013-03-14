@@ -157,8 +157,8 @@ TODOs
 Contribution
 -------
 
-Bug report: please make a ticket here.
-Pull request: of course, you are welcome!
+* Bug report: please make a ticket here.
+* Pull request: of course, you are welcome!
 
 License
 -------
