@@ -106,6 +106,21 @@
     return nil;
 }
 // optional
+//
+// Please extend this method if you want to customize object parse rules
+//
+// for example, you can split fullname to firstName and familyName like this
+//
+// -(void)parseObject:(id)object ForKey:(NSString *)key{
+//     if ([key isEqual:@"fullname"]){
+//         NSArray *splt = [((NSString *)object) componentsSeparatedByString:@" "];
+//         self.firstName = splt[0];
+//         self.familyName = splt[1];
+//     }else{
+//         [super parseObject:object ForKey:key];
+//     }
+// }
+//
 -(void)parseObject:(id)object ForKey:(NSString *)key{
     NSDictionary *props = [[self class] properties];
     if (object){

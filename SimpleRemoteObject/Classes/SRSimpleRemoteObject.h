@@ -26,6 +26,10 @@ typedef void(^SRFetchCompletionBlock)(NSArray *allRemote, NSError *error);
 +(NSString *)resultKey;
 
 // optional
+
+//
+// Please extend this method if you want to customize object parse rules
+//
 -(void)parseObject:(id)object ForKey:(NSString *)key;
 
 //
