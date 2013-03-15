@@ -107,9 +107,20 @@
 }
 // optional
 -(void)parseObject:(id)object ForKey:(NSString *)key{
+    NSDictionary *props = [[self class] properties];
     if (object){
-        [self setValue:object forKey:key];
+        if ([[props objectForKey:key] isEqual:@"NSDate"]){
+            NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+            formatter.dateFormat = [self timeformat];
+            NSDate *date = [formatter dateFromString:(NSString *)object];
+            [self setValue:date forKey:key];
+        }else{
+            [self setValue:object forKey:key];
+        }
     }
+}
+-(NSString*)timeformat{
+    return @"yyyy-MM-dd HH:mm:ssZZZZ";
 }
 
 @end

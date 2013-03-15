@@ -24,8 +24,14 @@ typedef void(^SRFetchCompletionBlock)(NSArray *allRemote, NSError *error);
  */
 +(NSString *)representUrl;
 +(NSString *)resultKey;
+
+// optional
 -(void)parseObject:(id)object ForKey:(NSString *)key;
 
-
+//
+// Please override this method you want to specify date format.
+// default is "yyyy-MM-dd HH:mm:ssZZZZ"
+//
+-(NSString *)timeformat;
 
 @end
