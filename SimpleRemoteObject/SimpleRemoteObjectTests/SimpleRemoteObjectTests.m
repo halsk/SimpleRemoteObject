@@ -12,6 +12,7 @@
 #import "Tag.h"
 #import "Echo.h"
 #import "Schedule.h"
+#import "Activity.h"
 
 
 SPEC_BEGIN(PropertyUtil)
@@ -168,7 +169,7 @@ describe(@"SimpleRemoteObject", ^{
             [[expectFutureValue(ret) shouldEventually] beNonNil];
             [[expectFutureValue(ret) shouldEventually] haveCountOf:2];
             
-            NSString *fmt = @"mm/dd, yyyy";
+            NSString *fmt = @"MM/dd, yyyy";
             NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
             [formatter setDateFormat:fmt];
             

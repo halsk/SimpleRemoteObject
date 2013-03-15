@@ -27,6 +27,7 @@
 		2BFD281A16F0C9DF0018C1FA /* NonArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD281916F0C9DF0018C1FA /* NonArrayObject.m */; };
 		2BFD281D16F0CD7C0018C1FA /* NonArrayRootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD281C16F0CD7C0018C1FA /* NonArrayRootObject.m */; };
 		2BFD282316F2D6D30018C1FA /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD282216F2D6D30018C1FA /* Schedule.m */; };
+		2BFD282616F2ED490018C1FA /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD282516F2ED490018C1FA /* Activity.m */; };
 		DB9018F3AED349E3BFFA66BD /* libPods-SimpleRemoteObjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B864C704D844448510F48E /* libPods-SimpleRemoteObjectTests.a */; };
 		ED640E208F8A49C0BFAF0A62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1126892D7EB748BABDA1C36E /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -88,6 +89,8 @@
 		2BFD281C16F0CD7C0018C1FA /* NonArrayRootObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NonArrayRootObject.m; path = classes/NonArrayRootObject.m; sourceTree = "<group>"; };
 		2BFD282116F2D6D30018C1FA /* Schedule.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Schedule.h; path = classes/Schedule.h; sourceTree = "<group>"; };
 		2BFD282216F2D6D30018C1FA /* Schedule.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Schedule.m; path = classes/Schedule.m; sourceTree = "<group>"; };
+		2BFD282416F2ED490018C1FA /* Activity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Activity.h; path = classes/Activity.h; sourceTree = "<group>"; };
+		2BFD282516F2ED490018C1FA /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = classes/Activity.m; sourceTree = "<group>"; };
 		40C56472478B4BB1A115F2BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BC9E2480BB574A91A00BFAF1 /* Pods-SimpleRemoteObjectTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRemoteObjectTests.xcconfig"; path = "Pods/Pods-SimpleRemoteObjectTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -212,6 +215,8 @@
 				2BFD281C16F0CD7C0018C1FA /* NonArrayRootObject.m */,
 				2BFD282116F2D6D30018C1FA /* Schedule.h */,
 				2BFD282216F2D6D30018C1FA /* Schedule.m */,
+				2BFD282416F2ED490018C1FA /* Activity.h */,
+				2BFD282516F2ED490018C1FA /* Activity.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -371,6 +376,7 @@
 				2BFD281A16F0C9DF0018C1FA /* NonArrayObject.m in Sources */,
 				2BFD281D16F0CD7C0018C1FA /* NonArrayRootObject.m in Sources */,
 				2BFD282316F2D6D30018C1FA /* Schedule.m in Sources */,
+				2BFD282616F2ED490018C1FA /* Activity.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
