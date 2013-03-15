@@ -160,6 +160,21 @@ describe(@"SimpleRemoteObject", ^{
             [[expectFutureValue(((Schedule *)[ret objectAtIndex:0]).date) shouldEventually] equal:[formatter dateFromString:@"2015-03-15 12:20:01+0900"]];
             [[expectFutureValue(((Schedule *)[ret objectAtIndex:1]).date) shouldEventually] equal:[formatter dateFromString:@"2015-04-15 12:20:01+0000"]];
         });
+        it(@"should apply date type data with original format", ^{
+            __block NSArray *ret;
+            [Activity fetchAsync:^(NSArray *allRemote, NSError *error){
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:2];
+            
+            NSString *fmt = @"mm/dd, yyyy";
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            [formatter setDateFormat:fmt];
+            
+            [[expectFutureValue(((Activity *)[ret objectAtIndex:0]).date) shouldEventually] equal:[formatter dateFromString:@"3/5, 2012"]];
+            [[expectFutureValue(((Activity *)[ret objectAtIndex:1]).date) shouldEventually] equal:[formatter dateFromString:@"4/20, 2013"]];
+        });
     });
 });
 SPEC_END
