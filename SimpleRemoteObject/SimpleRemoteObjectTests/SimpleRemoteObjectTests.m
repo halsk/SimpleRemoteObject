@@ -178,4 +178,38 @@ describe(@"SimpleRemoteObject", ^{
         });
     });
 });
+describe(@"SimpleRemoteObject", ^{
+    context(@"read remote echo object", ^{
+        beforeAll(^{
+            [Post defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should apply date type data", ^{
+            __block NSArray *ret;
+            [Post fetchAsync:^(NSArray *allRemote, NSError *error){
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:1];
+            
+            [[expectFutureValue(((Post *)[ret objectAtIndex:0]).tags) shouldEventually] haveCountOf:3];
+            [[expectFutureValue([((Post *)[ret objectAtIndex:0]).tags objectAtIndex:0]) shouldEventually] equal:@"objective-c"];
+        });
+        it(@"should apply date type data with original format", ^{
+            __block NSArray *ret;
+            [Activity fetchAsync:^(NSArray *allRemote, NSError *error){
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:2];
+            
+            NSString *fmt = @"MM/dd, yyyy";
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            [formatter setDateFormat:fmt];
+            
+            [[expectFutureValue(((Activity *)[ret objectAtIndex:0]).date) shouldEventually] equal:[formatter dateFromString:@"3/5, 2012"]];
+            [[expectFutureValue(((Activity *)[ret objectAtIndex:1]).date) shouldEventually] equal:[formatter dateFromString:@"4/20, 2013"]];
+        });
+    });
+});
 SPEC_END

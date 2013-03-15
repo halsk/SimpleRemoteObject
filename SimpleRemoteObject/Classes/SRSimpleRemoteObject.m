@@ -109,13 +109,13 @@
 //
 // Please extend this method if you want to customize object parse rules
 //
-// for example, you can split fullname to firstName and familyName like this
+// for example, you can split comma separated tags to NSArray
 //
 // -(void)parseObject:(id)object ForKey:(NSString *)key{
-//     if ([key isEqual:@"fullname"]){
-//         NSArray *splt = [((NSString *)object) componentsSeparatedByString:@" "];
-//         self.firstName = splt[0];
-//         self.familyName = splt[1];
+//     if ([key isEqual:@"tags"]){
+//         // For example, "tags" key has NSString data like this @"objective-c,json,simple" in JSON
+//         // Then this class has NSArray *tags property.
+//         self.tags = [((NSString *)object) componentsSeparatedByString:@","];
 //     }else{
 //         [super parseObject:object ForKey:key];
 //     }
