@@ -153,12 +153,12 @@ describe(@"SimpleRemoteObject", ^{
             [[expectFutureValue(ret) shouldEventually] beNonNil];
             [[expectFutureValue(ret) shouldEventually] haveCountOf:2];
             
-            NSString *str =@"1/15/2013 9:15 PM";
+            NSString *fmt = @"yyyy-MM-dd HH:mm:ssZZZZ";
             NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
-            [formatter setDateFormat:@"MM/dd/yyyy HH:mm a"];
-            NSDate *date = [formatter dateFromString:str];
+            [formatter setDateFormat:fmt];
             
-            [[expectFutureValue(((Schedule *)[ret objectAtIndex:0]).date) shouldEventually] equal:date];
+            [[expectFutureValue(((Schedule *)[ret objectAtIndex:0]).date) shouldEventually] equal:[formatter dateFromString:@"2015-03-15 12:20:01+0900"]];
+            [[expectFutureValue(((Schedule *)[ret objectAtIndex:1]).date) shouldEventually] equal:[formatter dateFromString:@"2015-04-15 12:20:01+0000"]];
         });
     });
 });
