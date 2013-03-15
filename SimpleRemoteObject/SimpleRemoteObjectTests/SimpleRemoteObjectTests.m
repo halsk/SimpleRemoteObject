@@ -11,6 +11,7 @@
 #import "NonArrayRootObject.h"
 #import "Tag.h"
 #import "Echo.h"
+#import "Schedule.h"
 
 
 SPEC_BEGIN(PropertyUtil)
@@ -51,7 +52,7 @@ SPEC_END
 
 SPEC_BEGIN(RemoteObject)
 
-describe(@"RemoteConfig", ^{
+describe(@"SimpleRemoteObject", ^{
     context(@"read remote tag object", ^{
         beforeAll(^{
             [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
@@ -74,7 +75,7 @@ describe(@"RemoteConfig", ^{
     });
 });
 
-describe(@"RemoteConfig", ^{
+describe(@"SimpleRemoteObject", ^{
     context(@"read non-array object", ^{
         beforeAll(^{
             [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
@@ -92,7 +93,7 @@ describe(@"RemoteConfig", ^{
     });
 });
 
-describe(@"RemoteConfig", ^{
+describe(@"SimpleRemoteObject", ^{
     context(@"read root object", ^{
         beforeAll(^{
             [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
@@ -120,7 +121,7 @@ describe(@"RemoteConfig", ^{
     });
 });
 
-describe(@"RemoteConfig", ^{
+describe(@"SimpleRemoteObject", ^{
     context(@"read remote echo object", ^{
         beforeAll(^{
             [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
@@ -135,6 +136,29 @@ describe(@"RemoteConfig", ^{
             [[expectFutureValue(ret) shouldEventually] beNonNil];
             [[expectFutureValue(ret) shouldEventually] haveCountOf:1];
             [[expectFutureValue(((Echo *)[ret objectAtIndex:0]).hoge) shouldEventually] equal:@"fuga"];
+        });
+    });
+});
+describe(@"SimpleRemoteObject", ^{
+    context(@"read remote echo object", ^{
+        beforeAll(^{
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should apply date type data", ^{
+            __block NSArray *ret;
+            [Schedule fetchAsync:^(NSArray *allRemote, NSError *error){
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:2];
+            
+            NSString *str =@"1/15/2013 9:15 PM";
+            NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
+            [formatter setDateFormat:@"MM/dd/yyyy HH:mm a"];
+            NSDate *date = [formatter dateFromString:str];
+            
+            [[expectFutureValue(((Schedule *)[ret objectAtIndex:0]).date) shouldEventually] equal:date];
         });
     });
 });
