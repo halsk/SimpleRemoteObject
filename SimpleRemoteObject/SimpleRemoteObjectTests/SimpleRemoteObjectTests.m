@@ -199,4 +199,23 @@ describe(@"SimpleRemoteObject", ^{
         });
     });
 });
+describe(@"SimpleRemoteObject", ^{
+    context(@"read remote post object using POST", ^{
+        beforeAll(^{
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should get object using POST method", ^{
+            NSDictionary *params = @{@"key":@"value"};
+            __block NSArray *ret;
+            [PostObj postAsyncWithParams:params async:^(NSArray *allRemote, NSError *error){
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:1];
+            [[expectFutureValue(((PostObj *)[ret objectAtIndex:0]).key) shouldEventually] equal:@"value"];
+        });
+    });
+});
+
 SPEC_END

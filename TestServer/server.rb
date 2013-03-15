@@ -36,6 +36,16 @@ server.mount_proc("/echo") { |req, res|
   res.body = JSON.generate(req.query)
   res["Content-Type"] = "application/json; charset=UTF8"
 }
+
+class PostServlet < WEBrick::HTTPServlet::AbstractServlet
+  def do_POST(req, res)
+    res.body = JSON.generate(req.query)
+    res["Content-Type"] = "application/json; charset=UTF8"
+  end
+end
+
+server.mount("/post", PostServlet)
+
 trap("INT"){ server.shutdown }
 server.start
 
