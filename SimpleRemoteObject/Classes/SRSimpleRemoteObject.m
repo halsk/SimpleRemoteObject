@@ -10,7 +10,6 @@
 #import "AFNetworking.h"
 #import "NSObject+SRPropertyUtil.h"
 
-
 @implementation SRSimpleRemoteObject
 
 /**
@@ -38,35 +37,93 @@
     NSLog(@"call:%@", strurl);
     [[self class] performSelector:@selector(fetchURL:async:) withObject:strurl withObject:completionBlock];
 }
++(void)postAsyncWithParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock{
+    NSString *path = [[self class] performSelector:@selector(representUrl)];
+    
+    NSString *strurl = [NSString stringWithFormat:@"%@%@", [SRRemoteConfig defaultConfig].baseurl, path];
+    NSLog(@"call:%@", strurl);
+
+    // define selector
+    SEL selector = @selector(postToURL:withParams:async:);
+    // get method signeture
+    NSMethodSignature* signature = [[self class] methodSignatureForSelector: selector];
+    // make NSInvocation instance
+    NSInvocation* invocation = [ NSInvocation invocationWithMethodSignature: signature ];
+    //[invocation retainArguments];
+    [invocation setSelector:selector];
+    [invocation setTarget:[self class]];
+    [invocation setArgument:&strurl atIndex:2];
+    [invocation setArgument:&params atIndex:3];
+    [invocation setArgument:&completionBlock atIndex:4];
+    [invocation invoke];
+    //[self class] performSelector:@selector(postToURL:withParams:async:) withObject:strurl withObject:params withObject:completionBlock];
+}
 +(void)fetchURL:(NSString *)strurl async:(SRFetchCompletionBlock)completionBlock{
     NSURL *url = [NSURL URLWithString:strurl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSLog(@"App.net Global Stream: %@", JSON);
-        NSString *key = [[self class] performSelector:@selector(resultKey)];
-        NSArray *ret = nil;
-        if (key){
-            NSArray *obj = nil;
-            if ([[JSON valueForKeyPath:key] isKindOfClass:[NSArray class]]){
-                obj = [JSON valueForKeyPath:key];
-            }else{
-                obj = [NSArray arrayWithObject:[JSON valueForKeyPath:key]];
-            }
-            ret = [[self class] parseJSONArray:obj];
-        }else{
-            if ([JSON isKindOfClass:[NSArray class]]){
-                ret = [[self class] parseJSONArray:JSON];
-            }else{
-                ret = [[self class] parseJSONArray:[NSArray arrayWithObject:JSON]];
-            }
-        }
+        NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
         completionBlock(ret,nil);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"App.net Error: %@", [error localizedDescription]);
         completionBlock(nil,error);
     }];
     [operation start];
+}
++(void)postToURL:(NSString *)strurl withParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock{
+    NSURL *url = [NSURL URLWithString:strurl];
+    AFHTTPClient * client = [[AFHTTPClient alloc] initWithBaseURL:url];
+    [client registerHTTPOperationClass:[AFJSONRequestOperation class]];
+    [client setDefaultHeader:@"Accept" value:@"application/json"];
+
+    [client postPath:strurl
+          parameters:params
+             success:^(AFHTTPRequestOperation *operation, id JSON) {
+                 NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
+                 completionBlock(ret,nil);
+             }
+             failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+                 if (error)
+                     NSLog(@"App.net Error: %@", [error localizedDescription]);
+                 completionBlock(nil,error);
+             }
+     ];
+    /*
+    NSMutableURLRequest *request = [NSURLRequest requestWithURL:url];
+    request.HTTPMethod = @"POST";
+    [request setValuesForKeysWithDictionary:params];
     
+
+    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+        NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
+        completionBlock(ret,nil);
+    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+        NSLog(@"App.net Error: %@", [error localizedDescription]);
+        completionBlock(nil,error);
+    }];
+    [operation start];
+     */
+}
++(NSArray *)operationSuccess:(id)JSON{
+    NSLog(@"App.net Global Stream: %@", JSON);
+    NSString *key = [[self class] performSelector:@selector(resultKey)];
+    NSArray *ret = nil;
+    if (key){
+        NSArray *obj = nil;
+        if ([[JSON valueForKeyPath:key] isKindOfClass:[NSArray class]]){
+            obj = [JSON valueForKeyPath:key];
+        }else{
+            obj = [NSArray arrayWithObject:[JSON valueForKeyPath:key]];
+        }
+        ret = [[self class] parseJSONArray:obj];
+    }else{
+        if ([JSON isKindOfClass:[NSArray class]]){
+            ret = [[self class] parseJSONArray:JSON];
+        }else{
+            ret = [[self class] parseJSONArray:[NSArray arrayWithObject:JSON]];
+        }
+    }
+    return ret;
 }
 #pragma mark -
 #pragma mark internal method

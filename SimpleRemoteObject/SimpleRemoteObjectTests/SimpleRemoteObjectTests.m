@@ -14,6 +14,7 @@
 #import "Schedule.h"
 #import "Activity.h"
 #import "Post.h"
+#import "PostObj.h"
 
 
 SPEC_BEGIN(PropertyUtil)

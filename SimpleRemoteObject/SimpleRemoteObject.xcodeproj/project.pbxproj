@@ -29,6 +29,7 @@
 		2BFD282316F2D6D30018C1FA /* Schedule.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD282216F2D6D30018C1FA /* Schedule.m */; };
 		2BFD282616F2ED490018C1FA /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD282516F2ED490018C1FA /* Activity.m */; };
 		2BFD282C16F2F8650018C1FA /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD282B16F2F8640018C1FA /* Post.m */; };
+		2BFD283316F31F4C0018C1FA /* PostObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD283216F31F4C0018C1FA /* PostObj.m */; };
 		DB9018F3AED349E3BFFA66BD /* libPods-SimpleRemoteObjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B864C704D844448510F48E /* libPods-SimpleRemoteObjectTests.a */; };
 		ED640E208F8A49C0BFAF0A62 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1126892D7EB748BABDA1C36E /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -94,6 +95,8 @@
 		2BFD282516F2ED490018C1FA /* Activity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Activity.m; path = classes/Activity.m; sourceTree = "<group>"; };
 		2BFD282A16F2F8640018C1FA /* Post.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Post.h; path = classes/Post.h; sourceTree = "<group>"; };
 		2BFD282B16F2F8640018C1FA /* Post.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Post.m; path = classes/Post.m; sourceTree = "<group>"; };
+		2BFD283116F31F4C0018C1FA /* PostObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostObj.h; path = classes/PostObj.h; sourceTree = "<group>"; };
+		2BFD283216F31F4C0018C1FA /* PostObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostObj.m; path = classes/PostObj.m; sourceTree = "<group>"; };
 		40C56472478B4BB1A115F2BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
 		BC9E2480BB574A91A00BFAF1 /* Pods-SimpleRemoteObjectTests.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleRemoteObjectTests.xcconfig"; path = "Pods/Pods-SimpleRemoteObjectTests.xcconfig"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
@@ -222,6 +225,8 @@
 				2BFD282516F2ED490018C1FA /* Activity.m */,
 				2BFD282A16F2F8640018C1FA /* Post.h */,
 				2BFD282B16F2F8640018C1FA /* Post.m */,
+				2BFD283116F31F4C0018C1FA /* PostObj.h */,
+				2BFD283216F31F4C0018C1FA /* PostObj.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				2BFD282316F2D6D30018C1FA /* Schedule.m in Sources */,
 				2BFD282616F2ED490018C1FA /* Activity.m in Sources */,
 				2BFD282C16F2F8650018C1FA /* Post.m in Sources */,
+				2BFD283316F31F4C0018C1FA /* PostObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

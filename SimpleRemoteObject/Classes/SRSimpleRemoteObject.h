@@ -17,6 +17,7 @@ typedef void(^SRFetchCompletionBlock)(NSArray *allRemote, NSError *error);
 
 +(void)fetchAsync:(SRFetchCompletionBlock)completionBlock;
 +(void)fetchAsyncWithParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock;
++(void)postAsyncWithParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock;
 
 
 /*
