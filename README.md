@@ -92,7 +92,7 @@ Getting started
  You can make an object like this.
 
  ```objc:User.h
- #import "SRSimpleRemoteObject.h"
+ #import <SimpleRemoteObject/SRSimpleRemoteObject.h>
  @interface User : SRSimpleRemoteObject
  @property(nonatomic,retain) NSString *name;
  @property(nonatomic,retain) NSString *email;
