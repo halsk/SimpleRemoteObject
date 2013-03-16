@@ -148,6 +148,8 @@ Documentation
 
 Sorry, not provided yet.
 
+[Test Code](https://github.com/halsk/SimpleRemoteObject/blob/master/SimpleRemoteObject/SimpleRemoteObjectTests/SimpleRemoteObjectTests.m) may help your understanding.
+
 TODOs
 -------
 
