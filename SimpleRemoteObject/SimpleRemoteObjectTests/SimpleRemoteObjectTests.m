@@ -17,26 +17,6 @@
 #import "PostObj.h"
 
 
-SPEC_BEGIN(PropertyUtil)
-
-describe(@"PropertyUtil", ^{
-    it(@"should have 3 properties", ^{
-        [[[User properties] should] haveCountOf:3];
-    });
-    it(@"should have name , mail and age", ^{
-        [[[[User properties] allKeys] should] contain:@"name"];
-        [[[[User properties] allKeys] should] contain:@"mail"];
-        [[[[User properties] allKeys] should] contain:@"age"];
-    });
-    it(@"should return object type ", ^{
-        [[[[User properties] objectForKey:@"name"] should] equal:@"NSString"];
-        [[[[User properties] objectForKey:@"mail"] should] equal:@"NSString"];
-        [[[[User properties] objectForKey:@"age"] should] equal:@"i"];
-    });
-});
-
-SPEC_END
-
 SPEC_BEGIN(RemoteConfig)
 
 describe(@"RemoteConfig", ^{
@@ -47,6 +27,9 @@ describe(@"RemoteConfig", ^{
         
         it(@"should have api endpoint", ^{
             [[[SRRemoteConfig defaultConfig].baseurl should] equal:@"http://localhost:2000/"];
+        });
+        it(@"should enable for SimpleRemoteObject class", ^{
+            [[[Tag baseurl] should] equal:@"http://localhost:2000/"];
         });
     });
 });
@@ -218,5 +201,25 @@ describe(@"SimpleRemoteObject", ^{
         });
     });
 });
+SPEC_END
+
+SPEC_BEGIN(PropertyUtil)
+
+describe(@"PropertyUtil", ^{
+    it(@"should have 3 properties", ^{
+        [[[User properties] should] haveCountOf:3];
+    });
+    it(@"should have name , mail and age", ^{
+        [[[[User properties] allKeys] should] contain:@"name"];
+        [[[[User properties] allKeys] should] contain:@"mail"];
+        [[[[User properties] allKeys] should] contain:@"age"];
+    });
+    it(@"should return object type ", ^{
+        [[[[User properties] objectForKey:@"name"] should] equal:@"NSString"];
+        [[[[User properties] objectForKey:@"mail"] should] equal:@"NSString"];
+        [[[[User properties] objectForKey:@"age"] should] equal:@"i"];
+    });
+});
 
 SPEC_END
+

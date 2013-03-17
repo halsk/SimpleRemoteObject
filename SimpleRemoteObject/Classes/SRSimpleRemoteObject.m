@@ -12,12 +12,16 @@
 
 @implementation SRSimpleRemoteObject
 
++(NSString *)baseurl{
+    return [SRRemoteConfig defaultConfig].baseurl;
+}
+
 /**
  // read data from specified URI
  */
 +(void)fetchAsync:(SRFetchCompletionBlock)completionBlock{
     
-    NSString *strurl = [NSString stringWithFormat:@"%@%@", [SRRemoteConfig defaultConfig].baseurl, [[self class] performSelector:@selector(representUrl)]];
+    NSString *strurl = [NSString stringWithFormat:@"%@%@", [self baseurl], [[self class] performSelector:@selector(representUrl)]];
     [[self class] performSelector:@selector(fetchURL:async:) withObject:strurl withObject:completionBlock];
 }
 /**
@@ -33,7 +37,7 @@
         }
     }
     
-    NSString *strurl = [NSString stringWithFormat:@"%@%@", [SRRemoteConfig defaultConfig].baseurl, path];
+    NSString *strurl = [NSString stringWithFormat:@"%@%@", [self baseurl], path];
     NSLog(@"call:%@", strurl);
     [[self class] performSelector:@selector(fetchURL:async:) withObject:strurl withObject:completionBlock];
 }
@@ -162,7 +166,9 @@
     [self doesNotRecognizeSelector:_cmd];
     return nil;
 }
-// optional
+
+#pragma mark -
+#pragma mark optional methods for overriding
 //
 // Please extend this method if you want to customize object parse rules
 //
@@ -194,5 +200,4 @@
 -(NSString*)timeformat{
     return @"yyyy-MM-dd HH:mm:ssZZZZ";
 }
-
 @end

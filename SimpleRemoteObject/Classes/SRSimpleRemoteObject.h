@@ -19,7 +19,11 @@ typedef void(^SRFetchCompletionBlock)(NSArray *allRemote, NSError *error);
 +(void)fetchAsyncWithParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock;
 +(void)postAsyncWithParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock;
 
++(void)fetchURL:(NSString *)strurl async:(SRFetchCompletionBlock)completionBlock;
++(void)postToURL:(NSString *)strurl withParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock;
 
++(NSString *)baseurl;
+    
 /*
  // should override on subclass
  */
