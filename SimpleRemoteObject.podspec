@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SimpleRemoteObject"
-  s.version      = "0.0.4"
+  s.version      = "0.0.5"
   s.summary      = "SimpleRemoteObject is a simple Objectie-C library that can create your classes' instance from server-side JSON text."
   s.license      = 'MIT'
   s.homepage     = "https://github.com/halsk/SimpleRemoteObject"
