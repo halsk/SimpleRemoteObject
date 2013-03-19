@@ -64,7 +64,7 @@
 }
 +(void)fetchURL:(NSString *)strurl async:(SRFetchCompletionBlock)completionBlock{
     NSURL *url = [NSURL URLWithString:strurl];
-    NSURLRequest *request = [NSURLRequest requestWithURL:url];
+    NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:[SRRemoteConfig defaultConfig].timeout];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
         completionBlock(ret,nil);

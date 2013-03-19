@@ -22,6 +22,7 @@
 		2B29FC1716F0173400FE1940 /* SRSimpleRemoteObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FC1616F0173400FE1940 /* SRSimpleRemoteObject.m */; };
 		2B29FC1916F018C500FE1940 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FC1816F018C500FE1940 /* SystemConfiguration.framework */; };
 		2B29FC1B16F018CD00FE1940 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FC1A16F018CD00FE1940 /* MobileCoreServices.framework */; };
+		2BE7758F16F881A400A179F4 /* TimeoutObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BE7758E16F881A400A179F4 /* TimeoutObj.m */; };
 		2BF1ED4216F04CA1002F7EE8 /* Echo.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF1ED4116F04CA1002F7EE8 /* Echo.m */; };
 		2BF1ED4516F04D6D002F7EE8 /* RootObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BF1ED4416F04D6D002F7EE8 /* RootObject.m */; };
 		2BFD281A16F0C9DF0018C1FA /* NonArrayObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD281916F0C9DF0018C1FA /* NonArrayObject.m */; };
@@ -81,6 +82,8 @@
 		2B29FC1616F0173400FE1940 /* SRSimpleRemoteObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRSimpleRemoteObject.m; path = Classes/SRSimpleRemoteObject.m; sourceTree = SOURCE_ROOT; };
 		2B29FC1816F018C500FE1940 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2B29FC1A16F018CD00FE1940 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		2BE7758D16F881A400A179F4 /* TimeoutObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TimeoutObj.h; path = classes/TimeoutObj.h; sourceTree = "<group>"; };
+		2BE7758E16F881A400A179F4 /* TimeoutObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TimeoutObj.m; path = classes/TimeoutObj.m; sourceTree = "<group>"; };
 		2BF1ED4016F04CA1002F7EE8 /* Echo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Echo.h; path = classes/Echo.h; sourceTree = "<group>"; };
 		2BF1ED4116F04CA1002F7EE8 /* Echo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Echo.m; path = classes/Echo.m; sourceTree = "<group>"; };
 		2BF1ED4316F04D6D002F7EE8 /* RootObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RootObject.h; path = classes/RootObject.h; sourceTree = "<group>"; };
@@ -227,6 +230,8 @@
 				2BFD282B16F2F8640018C1FA /* Post.m */,
 				2BFD283116F31F4C0018C1FA /* PostObj.h */,
 				2BFD283216F31F4C0018C1FA /* PostObj.m */,
+				2BE7758D16F881A400A179F4 /* TimeoutObj.h */,
+				2BE7758E16F881A400A179F4 /* TimeoutObj.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -389,6 +394,7 @@
 				2BFD282616F2ED490018C1FA /* Activity.m in Sources */,
 				2BFD282C16F2F8650018C1FA /* Post.m in Sources */,
 				2BFD283316F31F4C0018C1FA /* PostObj.m in Sources */,
+				2BE7758F16F881A400A179F4 /* TimeoutObj.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,7 +15,7 @@
 #import "Activity.h"
 #import "Post.h"
 #import "PostObj.h"
-
+#import "TimeoutObj.h"
 
 SPEC_BEGIN(RemoteConfig)
 
@@ -198,6 +198,23 @@ describe(@"SimpleRemoteObject", ^{
             [[expectFutureValue(ret) shouldEventually] beNonNil];
             [[expectFutureValue(ret) shouldEventually] haveCountOf:1];
             [[expectFutureValue(((PostObj *)[ret objectAtIndex:0]).key) shouldEventually] equal:@"value"];
+        });
+    });
+});
+
+describe(@"SimpleRemoteObject", ^{
+    context(@"read timeout", ^{
+        beforeAll(^{
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+            [SRRemoteConfig defaultConfig].timeout = 2;
+        });
+        
+        it(@"should timeout with specified second", ^{
+            __block NSError *ret;
+            [TimeoutObj fetchAsync:^(NSArray *allRemote, NSError *error) {
+                ret = error;
+            }];
+            [[expectFutureValue(ret) shouldEventuallyBeforeTimingOutAfter(3.0)] beNonNil];
         });
     });
 });

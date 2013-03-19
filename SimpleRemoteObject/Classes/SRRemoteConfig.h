@@ -13,6 +13,7 @@
 
 @interface SRRemoteConfig : NSObject
 @property(nonatomic,strong) NSString *baseurl;
+@property(nonatomic) int timeout;
 
 + (SRRemoteConfig *) defaultConfig;
 

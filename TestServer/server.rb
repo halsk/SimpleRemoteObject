@@ -32,6 +32,12 @@ server.mount_proc("/") { |req, res|
   res["Content-Type"] = content_type
 }
 
+server.mount_proc("/longtime") { |req, res|
+  res.body = '{"result":"ok"}'
+  sleep(5)
+  res["Content-Type"] = "application/json; charset=UTF8"
+}
+
 server.mount_proc("/echo") { |req, res|
   res.body = JSON.generate(req.query)
   res["Content-Type"] = "application/json; charset=UTF8"

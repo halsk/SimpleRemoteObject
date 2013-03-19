@@ -12,6 +12,7 @@
 
 static SRRemoteConfig *defaultConfig = nil;
 
+static int TIMEOUT_DEFAULT = 30;
 
 + (SRRemoteConfig *) defaultConfig
 {
@@ -19,6 +20,7 @@ static SRRemoteConfig *defaultConfig = nil;
     dispatch_once(&onceToken, ^
                   {
                       SRRemoteConfig  *newConfig = [[SRRemoteConfig  alloc] init];
+                      newConfig.timeout = TIMEOUT_DEFAULT;
                       [newConfig useAsDefault];
                   });
     
