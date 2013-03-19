@@ -215,6 +215,7 @@ describe(@"SimpleRemoteObject", ^{
                 ret = error;
             }];
             [[expectFutureValue(ret) shouldEventuallyBeforeTimingOutAfter(3.0)] beNonNil];
+            [[expectFutureValue(ret.localizedDescription) shouldEventuallyBeforeTimingOutAfter(3.0)] equal:@"The request timed out."];
         });
     });
 });
