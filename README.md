@@ -169,7 +169,7 @@ SimpleRemoteObject is available under the MIT license. See the LICENSE file for 
 Credits
 -------
 
-Version 0.0.4
+Version 0.0.6
 
 SimpleRemoteObject is written and maintained by Hal Seki. I've learned and inspired by NSRails project, many thanks there!
 
