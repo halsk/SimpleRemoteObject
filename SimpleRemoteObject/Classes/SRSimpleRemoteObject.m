@@ -67,7 +67,8 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:[SRRemoteConfig defaultConfig].timeout];
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
-        completionBlock(ret,nil);
+        NSError *error = [[self class] performSelector:@selector(parseError:) withObject:JSON];
+        completionBlock(ret,error);
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         NSLog(@"App.net Error: %@", [error localizedDescription]);
         completionBlock(nil,error);
@@ -84,7 +85,8 @@
           parameters:params
              success:^(AFHTTPRequestOperation *operation, id JSON) {
                  NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
-                 completionBlock(ret,nil);
+		 NSError *error = [[self class] performSelector:@selector(parseError:) withObject:JSON];
+                 completionBlock(ret,error);
              }
              failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                  if (error)
@@ -112,7 +114,7 @@
     NSLog(@"App.net Global Stream: %@", JSON);
     NSString *key = [[self class] performSelector:@selector(resultKey)];
     NSArray *ret = nil;
-    if (key){
+    if (key && [JSON valueForKeyPath:key]){
         NSArray *obj = nil;
         if ([[JSON valueForKeyPath:key] isKindOfClass:[NSArray class]]){
             obj = [JSON valueForKeyPath:key];
@@ -157,7 +159,7 @@
 }
 
 #pragma mark -
-#pragma mark below methods shoul be doverride in a subclass
+#pragma mark below methods shoul be override in a subclass
 +(NSString *)representUrl{
     [self doesNotRecognizeSelector:_cmd];
     return nil;
@@ -200,4 +202,10 @@
 -(NSString*)timeformat{
     return @"yyyy-MM-dd HH:mm:ssZZZZ";
 }
+
++(NSError *)parseError:(id)obj
+{
+    return nil;
+}
+
 @end

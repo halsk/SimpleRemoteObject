@@ -43,4 +43,10 @@ typedef void(^SRFetchCompletionBlock)(NSArray *allRemote, NSError *error);
 //
 -(NSString *)timeformat;
 
+//
+// Please override this method if you want to parse error from repsonse.
+//
++(NSError *)parseError:(id)obj;
+
+
 @end
