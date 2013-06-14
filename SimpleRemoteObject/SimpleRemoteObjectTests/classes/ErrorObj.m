@@ -2,8 +2,8 @@
 //  ErrorObj.m
 //  SimpleRemoteObject
 //
-//  Created by 松澤 太郎 on 2013/06/14.
-//  Copyright (c) 2013年 Georepublic. All rights reserved.
+//  Created by Taro Matsuzawa on 2013/06/14.
+//  Copyright (c) 2013 Georepublic. All rights reserved.
 //
 
 #import "ErrorObj.h"
