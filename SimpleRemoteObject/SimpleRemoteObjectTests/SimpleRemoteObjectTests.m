@@ -16,6 +16,8 @@
 #import "Post.h"
 #import "PostObj.h"
 #import "TimeoutObj.h"
+#import "ErrorObj.h"
+#import "NoResultKeyErrorCheckObj.h"
 
 SPEC_BEGIN(RemoteConfig)
 
@@ -219,6 +221,45 @@ describe(@"SimpleRemoteObject", ^{
         });
     });
 });
+
+describe(@"SimpleRemoteObject", ^{
+    context(@"parse error", ^{
+        beforeAll(^{
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should return NSError Object", ^{
+            __block NSError *ret;
+            [ErrorObj fetchAsync:^(NSArray *allRemote, NSError *error) {
+                ret = error;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(theValue(ret.code)) shouldEventually] equal:theValue(1)];
+            [[expectFutureValue(ret.localizedDescription) shouldEventually] equal:@"Session is invalid."];
+        });
+    });
+});
+
+describe(@"SimpleRemoteObject", ^{
+    context(@"set a result key and return no key's value", ^{
+        beforeAll(^{
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should not raise error", ^{
+            __block NSArray *ret;
+            [NoResultKeyErrorCheckObj fetchAsync:^(NSArray *allRemote, NSError *error) {
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:1];
+            [[expectFutureValue(theValue(((NoResultKeyErrorCheckObj *)[ret objectAtIndex:0]).status)) shouldEventually] equal:theValue(-1)];
+            [[expectFutureValue(((NoResultKeyErrorCheckObj *)[ret objectAtIndex:0]).error) shouldEventually] equal:@"Session is invalid."];
+        });
+    });
+});
+
+
 SPEC_END
 
 SPEC_BEGIN(PropertyUtil)
