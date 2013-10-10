@@ -38,7 +38,12 @@
 
 + (NSDictionary *)properties
 {
-    NSMutableDictionary *results = [[NSMutableDictionary alloc] init];
+    NSMutableDictionary *results;
+    if ([self superclass] != [NSObject class]) {
+        results = (NSMutableDictionary *)[[self superclass] properties];
+    } else {
+        results = [NSMutableDictionary dictionary];
+    }
     
     unsigned int outCount, i;
     objc_property_t *properties = class_copyPropertyList(self, &outCount);
@@ -53,8 +58,7 @@
     }
     free(properties);
     
-    // returning a copy here to make sure the dictionary is immutable
-    return [NSDictionary dictionaryWithDictionary:results];
+    return results;
 }
 
 

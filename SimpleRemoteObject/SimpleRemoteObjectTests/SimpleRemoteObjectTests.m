@@ -18,6 +18,7 @@
 #import "TimeoutObj.h"
 #import "ErrorObj.h"
 #import "NoResultKeyErrorCheckObj.h"
+#import "TagSubClass.h"
 
 SPEC_BEGIN(RemoteConfig)
 
@@ -255,6 +256,29 @@ describe(@"SimpleRemoteObject", ^{
             [[expectFutureValue(ret) shouldEventually] haveCountOf:1];
             [[expectFutureValue(theValue(((NoResultKeyErrorCheckObj *)[ret objectAtIndex:0]).status)) shouldEventually] equal:theValue(-1)];
             [[expectFutureValue(((NoResultKeyErrorCheckObj *)[ret objectAtIndex:0]).error) shouldEventually] equal:@"Session is invalid."];
+        });
+    });
+});
+
+describe(@"SimpleRemoteObject", ^{
+    context(@"sub class can access parent class's attributes", ^{
+        beforeAll(^{
+            [SRRemoteConfig defaultConfig].baseurl = @"http://localhost:2000/";
+        });
+        
+        it(@"should read remote json", ^{
+            __block NSArray *ret;
+            [TagSubClass fetchAsync:^(NSArray *allRemote, NSError *error) {
+                ret = allRemote;
+            }];
+            [[expectFutureValue(ret) shouldEventually] beNonNil];
+            [[expectFutureValue(ret) shouldEventually] haveCountOf:3];
+            [[expectFutureValue(((TagSubClass *)[ret objectAtIndex:0]).name) shouldEventually] equal:@"カフェ"];
+            [[expectFutureValue(((TagSubClass *)[ret objectAtIndex:1]).name) shouldEventually] equal:@"ハッカソン"];
+            [[expectFutureValue(((TagSubClass *)[ret objectAtIndex:2]).name) shouldEventually] equal:@"破滅"];
+            [[expectFutureValue(((TagSubClass *)[ret objectAtIndex:0]).resource_uri) shouldEventually] equal:@"/api/tag/%E3%82%AB%E3%83%95%E3%82%A7"];
+            [[expectFutureValue(((TagSubClass *)[ret objectAtIndex:0]).slug) shouldEventually] equal:@"カフェ"];
+            [[expectFutureValue(((TagSubClass *)[ret objectAtIndex:0]).remoteId) shouldEventually] equal:theValue(2)];
         });
     });
 });
