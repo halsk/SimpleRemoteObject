@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "objc/runtime.h"
 
 @interface NSObject(SRPropertyUtil)
++ (NSString *)getPropertyTypeNSString:(objc_property_t)property;
 + (NSDictionary *)properties;
 
 @end

@@ -31,6 +31,7 @@
 		2BFD282616F2ED490018C1FA /* Activity.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD282516F2ED490018C1FA /* Activity.m */; };
 		2BFD282C16F2F8650018C1FA /* Post.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD282B16F2F8640018C1FA /* Post.m */; };
 		2BFD283316F31F4C0018C1FA /* PostObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 2BFD283216F31F4C0018C1FA /* PostObj.m */; };
+		53625D7C18062C4B0083C934 /* TagSubClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 53625D7B18062C4B0083C934 /* TagSubClass.m */; };
 		53BB4654176B0191009396CB /* ErrorObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BB4653176B0191009396CB /* ErrorObj.m */; };
 		53BB4657176B0479009396CB /* NoResultKeyErrorCheckObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 53BB4656176B0479009396CB /* NoResultKeyErrorCheckObj.m */; };
 		DB9018F3AED349E3BFFA66BD /* libPods-SimpleRemoteObjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 26B864C704D844448510F48E /* libPods-SimpleRemoteObjectTests.a */; };
@@ -103,6 +104,8 @@
 		2BFD283116F31F4C0018C1FA /* PostObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostObj.h; path = classes/PostObj.h; sourceTree = "<group>"; };
 		2BFD283216F31F4C0018C1FA /* PostObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostObj.m; path = classes/PostObj.m; sourceTree = "<group>"; };
 		40C56472478B4BB1A115F2BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		53625D7A18062C4B0083C934 /* TagSubClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TagSubClass.h; path = classes/TagSubClass.h; sourceTree = "<group>"; };
+		53625D7B18062C4B0083C934 /* TagSubClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TagSubClass.m; path = classes/TagSubClass.m; sourceTree = "<group>"; };
 		53BB4652176B0191009396CB /* ErrorObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorObj.h; path = classes/ErrorObj.h; sourceTree = "<group>"; };
 		53BB4653176B0191009396CB /* ErrorObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorObj.m; path = classes/ErrorObj.m; sourceTree = "<group>"; };
 		53BB4655176B0479009396CB /* NoResultKeyErrorCheckObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoResultKeyErrorCheckObj.h; path = classes/NoResultKeyErrorCheckObj.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 				53BB4653176B0191009396CB /* ErrorObj.m */,
 				53BB4655176B0479009396CB /* NoResultKeyErrorCheckObj.h */,
 				53BB4656176B0479009396CB /* NoResultKeyErrorCheckObj.m */,
+				53625D7A18062C4B0083C934 /* TagSubClass.h */,
+				53625D7B18062C4B0083C934 /* TagSubClass.m */,
 			);
 			name = classes;
 			sourceTree = "<group>";
@@ -399,6 +404,7 @@
 				2BF1ED4216F04CA1002F7EE8 /* Echo.m in Sources */,
 				2BF1ED4516F04D6D002F7EE8 /* RootObject.m in Sources */,
 				2BFD281A16F0C9DF0018C1FA /* NonArrayObject.m in Sources */,
+				53625D7C18062C4B0083C934 /* TagSubClass.m in Sources */,
 				2BFD281D16F0CD7C0018C1FA /* NonArrayRootObject.m in Sources */,
 				2BFD282316F2D6D30018C1FA /* Schedule.m in Sources */,
 				2BFD282616F2ED490018C1FA /* Activity.m in Sources */,
