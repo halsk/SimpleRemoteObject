@@ -65,50 +65,35 @@
 +(void)fetchURL:(NSString *)strurl async:(SRFetchCompletionBlock)completionBlock{
     NSURL *url = [NSURL URLWithString:strurl];
     NSURLRequest *request = [NSURLRequest requestWithURL:url cachePolicy:NSURLRequestReloadIgnoringCacheData timeoutInterval:[SRRemoteConfig defaultConfig].timeout];
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [AFJSONResponseSerializer serializer];
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *operation, id JSON) {
         NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
         NSError *error = [[self class] performSelector:@selector(parseError:) withObject:JSON];
         completionBlock(ret,error);
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"App.net Error: %@", [error localizedDescription]);
         completionBlock(nil,error);
     }];
     [operation start];
 }
 +(void)postToURL:(NSString *)strurl withParams:(NSDictionary *)params async:(SRFetchCompletionBlock)completionBlock{
-    NSURL *url = [NSURL URLWithString:strurl];
-    AFHTTPClient * client = [[AFHTTPClient alloc] initWithBaseURL:url];
-    [client registerHTTPOperationClass:[AFJSONRequestOperation class]];
-    [client setDefaultHeader:@"Accept" value:@"application/json"];
+    AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+    manager.responseSerializer = [AFJSONResponseSerializer serializer];
+    manager.requestSerializer = [AFJSONRequestSerializer serializer];
 
-    [client postPath:strurl
-          parameters:params
-             success:^(AFHTTPRequestOperation *operation, id JSON) {
-                 NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
-		 NSError *error = [[self class] performSelector:@selector(parseError:) withObject:JSON];
-                 completionBlock(ret,error);
-             }
-             failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-                 if (error)
-                     NSLog(@"App.net Error: %@", [error localizedDescription]);
-                 completionBlock(nil,error);
-             }
-     ];
-    /*
-    NSMutableURLRequest *request = [NSURLRequest requestWithURL:url];
-    request.HTTPMethod = @"POST";
-    [request setValuesForKeysWithDictionary:params];
-    
-
-    AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
-        NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
-        completionBlock(ret,nil);
-    } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
-        NSLog(@"App.net Error: %@", [error localizedDescription]);
-        completionBlock(nil,error);
-    }];
-    [operation start];
-     */
+    [manager POST:strurl
+       parameters:params
+constructingBodyWithBlock:nil
+          success:^(AFHTTPRequestOperation *operation, id JSON) {
+              NSArray *ret = [[self class] performSelector:@selector(operationSuccess:) withObject:JSON];
+              NSError *error = [[self class] performSelector:@selector(parseError:) withObject:JSON];
+              completionBlock(ret,error);
+          } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+              if (error)
+                  NSLog(@"App.net Error: %@", [error localizedDescription]);
+              completionBlock(nil,error);
+          }];
 }
 +(NSArray *)operationSuccess:(id)JSON{
     NSLog(@"App.net Global Stream: %@", JSON);

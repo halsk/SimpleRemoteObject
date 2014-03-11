@@ -1,7 +1,7 @@
-platform :ios, '5.1'
+platform :ios, '6.0'
 
-pod 'AFNetworking'
+pod 'AFNetworking', "~> 2.0"
 
 target :SimpleRemoteObjectTests, :exclusive => true do
-  pod 'Kiwi'
+  pod 'Kiwi/XCTest'
 end

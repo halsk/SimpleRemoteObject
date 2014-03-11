@@ -10,7 +10,6 @@
 		2B29FBE216F0126000FE1940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBE116F0126000FE1940 /* Foundation.framework */; };
 		2B29FBE716F0126000FE1940 /* SRRemoteConfig.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 2B29FBE616F0126000FE1940 /* SRRemoteConfig.h */; };
 		2B29FBE916F0126000FE1940 /* SRRemoteConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 2B29FBE816F0126000FE1940 /* SRRemoteConfig.m */; };
-		2B29FBF116F0126000FE1940 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBF016F0126000FE1940 /* SenTestingKit.framework */; };
 		2B29FBF316F0126000FE1940 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBF216F0126000FE1940 /* UIKit.framework */; };
 		2B29FBF416F0126000FE1940 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBE116F0126000FE1940 /* Foundation.framework */; };
 		2B29FBF716F0126000FE1940 /* libSimpleRemoteObject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B29FBDE16F0126000FE1940 /* libSimpleRemoteObject.a */; };
@@ -68,8 +67,7 @@
 		2B29FBE516F0126000FE1940 /* SimpleRemoteObject-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "SimpleRemoteObject-Prefix.pch"; path = "Supporting Files/SimpleRemoteObject-Prefix.pch"; sourceTree = SOURCE_ROOT; };
 		2B29FBE616F0126000FE1940 /* SRRemoteConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SRRemoteConfig.h; path = Classes/SRRemoteConfig.h; sourceTree = SOURCE_ROOT; };
 		2B29FBE816F0126000FE1940 /* SRRemoteConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = SRRemoteConfig.m; path = Classes/SRRemoteConfig.m; sourceTree = SOURCE_ROOT; };
-		2B29FBEF16F0126000FE1940 /* SimpleRemoteObjectTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleRemoteObjectTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2B29FBF016F0126000FE1940 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2B29FBEF16F0126000FE1940 /* SimpleRemoteObjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleRemoteObjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B29FBF216F0126000FE1940 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		2B29FBFA16F0126000FE1940 /* SimpleRemoteObjectTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SimpleRemoteObjectTests-Info.plist"; sourceTree = "<group>"; };
 		2B29FBFC16F0126000FE1940 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -103,6 +101,7 @@
 		2BFD283116F31F4C0018C1FA /* PostObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PostObj.h; path = classes/PostObj.h; sourceTree = "<group>"; };
 		2BFD283216F31F4C0018C1FA /* PostObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PostObj.m; path = classes/PostObj.m; sourceTree = "<group>"; };
 		40C56472478B4BB1A115F2BB /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = SOURCE_ROOT; };
+		53628A3118CF44E000436559 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		53BB4652176B0191009396CB /* ErrorObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ErrorObj.h; path = classes/ErrorObj.h; sourceTree = "<group>"; };
 		53BB4653176B0191009396CB /* ErrorObj.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ErrorObj.m; path = classes/ErrorObj.m; sourceTree = "<group>"; };
 		53BB4655176B0479009396CB /* NoResultKeyErrorCheckObj.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NoResultKeyErrorCheckObj.h; path = classes/NoResultKeyErrorCheckObj.h; sourceTree = "<group>"; };
@@ -126,7 +125,6 @@
 			files = (
 				2B29FC1B16F018CD00FE1940 /* MobileCoreServices.framework in Frameworks */,
 				2B29FC1916F018C500FE1940 /* SystemConfiguration.framework in Frameworks */,
-				2B29FBF116F0126000FE1940 /* SenTestingKit.framework in Frameworks */,
 				2B29FBF316F0126000FE1940 /* UIKit.framework in Frameworks */,
 				2B29FBF416F0126000FE1940 /* Foundation.framework in Frameworks */,
 				2B29FBF716F0126000FE1940 /* libSimpleRemoteObject.a in Frameworks */,
@@ -155,7 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				2B29FBDE16F0126000FE1940 /* libSimpleRemoteObject.a */,
-				2B29FBEF16F0126000FE1940 /* SimpleRemoteObjectTests.octest */,
+				2B29FBEF16F0126000FE1940 /* SimpleRemoteObjectTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -163,8 +161,8 @@
 		2B29FBE016F0126000FE1940 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				53628A3118CF44E000436559 /* SenTestingKit.framework */,
 				2B29FBE116F0126000FE1940 /* Foundation.framework */,
-				2B29FBF016F0126000FE1940 /* SenTestingKit.framework */,
 				2B29FBF216F0126000FE1940 /* UIKit.framework */,
 				1126892D7EB748BABDA1C36E /* libPods.a */,
 				26B864C704D844448510F48E /* libPods-SimpleRemoteObjectTests.a */,
@@ -293,8 +291,8 @@
 			);
 			name = SimpleRemoteObjectTests;
 			productName = SimpleRemoteObjectTests;
-			productReference = 2B29FBEF16F0126000FE1940 /* SimpleRemoteObjectTests.octest */;
-			productType = "com.apple.product-type.bundle";
+			productReference = 2B29FBEF16F0126000FE1940 /* SimpleRemoteObjectTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -302,6 +300,7 @@
 		2B29FBD616F0126000FE1940 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastTestingUpgradeCheck = 0510;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = Georepublic;
 			};
@@ -518,17 +517,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/SimpleRemoteObject-Prefix.pch";
 				INFOPLIST_FILE = "SimpleRemoteObjectTests/SimpleRemoteObjectTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					SenTestingKit,
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -539,17 +535,14 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
 					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Supporting Files/SimpleRemoteObject-Prefix.pch";
 				INFOPLIST_FILE = "SimpleRemoteObjectTests/SimpleRemoteObjectTests-Info.plist";
-				OTHER_LDFLAGS = (
-					"-ObjC",
-					"-framework",
-					SenTestingKit,
-				);
+				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
