@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.license      = 'MIT'
   s.homepage     = "https://github.com/halsk/SimpleRemoteObject"
   s.author       = { "Hal Seki" => "hal@georepublic.co.jp" }
-  s.source       = { :git => "https://github.com/smellman/SimpleRemoteObject.git", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/halsk/SimpleRemoteObject.git", :tag => s.version.to_s }
   s.platform     = :ios, '6.0'
   s.source_files = 'SimpleRemoteObject/classes/**/*.{h,m}'
   s.dependency 'AFNetworking', '>= 2.0.0'
